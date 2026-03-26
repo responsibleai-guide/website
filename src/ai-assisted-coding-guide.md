@@ -5,7 +5,7 @@ title: AI-Assisted Coding Guide
 
 # Practical Guide: Working with AI Tools as a Developer
 
-**Boundaries, workflows, and expectations for a small NGO development team**
+**Boundaries, workflows, and expectations for AI-assisted development**
 
 ---
 
