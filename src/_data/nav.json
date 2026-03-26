@@ -1,0 +1,6 @@
+[
+  { "title": "Framework / Guide", "url": "/" },
+  { "title": "For Developers", "url": "/ai-assisted-coding-guide/" },
+  { "title": "For Maintainers", "url": "/managing-ai-contributions/" },
+  { "title": "Recommended Open Models", "url": "/recommended-open-models/" }
+]
