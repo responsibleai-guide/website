@@ -5,7 +5,7 @@ title: AI-Assisted Coding Guide
 
 # Practical Guide: Working with AI Tools as a Developer
 
-**Boundaries, workflows, and expectations for AI-assisted development**
+**Boundaries, workflows, and expectations for AI-assisted development.**
 
 ---
 
@@ -25,7 +25,7 @@ Using AI is like delegating work to a junior team member. It can move fast and p
 
 - **First drafts, boilerplate, prototyping:** Config files, repetitive scaffolding, test stubs, standard templates. And if you need to assess the feasibility of an idea, AI can generate a throwaway test quickly, before planning a well-architected solution.
 - **Explaining unfamiliar code:** "What does this function do?" is a great use of AI.
-- **Brainstorming approaches:** "What are three ways I could structure this migration?" - then evaluate each with your own judgement. Note that LLMs tend to be agreeable and may affirm your framing. Phrase questions in a neutral way, and be aware the response may not surface all options.
+- **Brainstorming approaches:** "What are three ways I could structure this migration?" - then evaluate each with your own judgment. Note that LLMs tend to be agreeable and may affirm your framing. Phrase questions in a neutral way, and be aware the response may not surface all options.
 - **Drafting documentation:** Let AI produce a first pass, then rewrite it in your own words to ensure accuracy.
 - **Debugging assistance:** Paste an error message and ask for possible causes. Verify before applying.
 - **Refactoring suggestions:** AI can suggest cleaner patterns. If you only need a small refactor, be explicit about scope - AI has a tendency toward mission creep, and a tightly scoped request can expand quickly if you're not specific.
@@ -33,16 +33,16 @@ Using AI is like delegating work to a junior team member. It can move fast and p
 
 ## What AI Is Bad At (Be Cautious Here)
 
-- **Architecture decisions:** AI does not understand your system's history, constraints, or users. It will happily suggest a redesign and large refactors that ignores your actual context. These decisions are yours to make.
+- **Architecture decisions:** AI does not understand your system's history, constraints, or users. It will happily suggest a redesign and large refactors that ignore your actual context. These decisions are yours to make.
 - **Security-sensitive code:** AI-generated code frequently has vulnerabilities - missing input validation, insecure defaults, outdated patterns. All security-relevant code must be manually engineered and reviewed.
-- **Domain-specific logic:** AI often fails on edge cases unique to your domain. _(Example from geospatial: AI routinely mishandles anti-meridian polygon wrapping because it doesn't understand spherical geometry unless explicitly guided.)_ Providing domain-specific context in your prompt can help, but in some cases general models are simply not the right tool for specialised knowledge.
+- **Domain-specific logic:** AI often fails on edge cases unique to your domain. _(Example from geospatial: AI routinely mishandles anti-meridian polygon wrapping because it doesn't understand spherical geometry unless explicitly guided.)_ Providing domain-specific context in your prompt can help, but in some cases general models are simply not the right tool for specialized knowledge.
 - **Choosing dependencies:** LLMs frequently generate custom implementations instead of using well-tested libraries. Always ask: does a maintained library already solve this? If yes, use it.
 - **Anything involving beneficiary or sensitive data:** Never paste personal data, donor information, or internal strategy into AI tools. Ensure access restrictions are set when sharing code repositories with agents (including ensuring `.env` files and secrets are not exposed).
 
 ## What AI Must Not Be Used For
 
 - **Submitting code you have not read and understood.** If you cannot explain what it does line by line, do not submit it.
-- **Generating reports or communications** that go to beneficiaries, donors, or partners without human review. AI can draft; a human must finalise.
+- **Generating reports or communications** that go to beneficiaries, donors, or partners without human review. AI can draft; a human must finalize.
 - **Replacing your own learning.** If a task is assigned to help you learn a codebase or technology, do the thinking yourself first. Use AI to check your work, not to bypass it.
 - **Feeding sensitive or private data into any AI tool.** This includes names, contact details, health data, financial information, and internal strategy documents.
 
@@ -74,7 +74,7 @@ The more precise your prompt, the more useful the output.
 
 ### 4. Give AI a Way to Verify Its Own Work
 
-Where possible, set the AI up with a feedback loop - a way to run tests, check output, or validate behaviour. This significantly improves result quality. Without verification, the AI is guessing. With it, it can iterate until things actually work. This might mean running a test suite, executing a bash command that confirms expected behaviour, or checking a UI in a browser. The form of testing matters less than the existence of it.
+Where possible, set the AI up with a feedback loop - a way to run tests, check output, or validate behavior. This significantly improves result quality. Without verification, the AI is guessing. With it, it can iterate until things actually work. This might mean running a test suite, executing a bash command that confirms expected behavior, or checking a UI in a browser. The form of testing matters less than its existence.
 
 ### 5. Review Everything
 
@@ -143,8 +143,8 @@ Before merging any AI-generated code, verify:
 - [ ] Dependencies are pinned and from trusted sources (see [OWASP Vulnerable Dependency Management Cheat Sheet][owasp-deps])
 - [ ] Error handling does not leak sensitive information (see [OWASP Error Handling Cheat Sheet][owasp-errors])
 - [ ] No unnecessary permissions or access scopes (apply [least privilege][owasp-least-priv])
-- [ ] SQL queries are parameterised (no string concatenation; see [OWASP SQL Injection Prevention Cheat Sheet][owasp-sqli])
-- [ ] File paths are sanitised against [traversal attacks][owasp-traversal].
+- [ ] SQL queries are parameterized (no string concatenation; see [OWASP SQL Injection Prevention Cheat Sheet][owasp-sqli])
+- [ ] File paths are sanitized against [traversal attacks][owasp-traversal].
 - [ ] Output encoding is appropriate for the context (HTML, JSON, etc.; see [OWASP Cross Site Scripting Prevention Cheat Sheet][owasp-xss])
 
 ---

@@ -5,7 +5,7 @@ title: Using LLMs Responsibly
 
 # Using LLMs to Develop Software: Ethics, Risks, and Responsible Practice
 
-**A living framework for NGOs, civil society organisations, and mission-driven teams navigating AI adoption in software development**
+**A living framework for NGOs, civil society organizations, and mission-driven teams navigating AI adoption in software development.**
 
 _First draft - due to update May 2026_
 
@@ -28,7 +28,7 @@ This framework was built in collaboration and is adopted by the following partne
 
 AI coding tools have moved from novelty to daily workflow in under two years. Andrej Karpathy coined the term "vibe coding" in early 2025 - describing developers who prompt AI, accept all suggestions, and barely read the output. By early 2026, he had already moved on, calling the practice outdated and advocating instead for "agentic engineering": careful, supervised AI-assisted development with full human oversight [1]. While early-2025 AI models were shown in some cases to have a net negative impact on developer productivity [21], models have improved significantly by early 2026, alongside growing efforts within open-source communities to establish appropriate governance and usage policies.
 
-This trajectory tells us something important: the tools are real and improving rapidly, but the hype cycle consistently outpaces responsible adoption. For any organisation working in the public interest and given the prevalence of LLM use in software in this moment, a governance approach that provides deliberate attention to the ethics of LLM use in software is required.
+This trajectory tells us something important: the tools are real and improving rapidly, but the hype cycle consistently outpaces responsible adoption. For any organization working in the public interest and given the prevalence of LLM use in software in this moment, a governance approach that provides deliberate attention to the ethics of LLM use in software is required.
 
 This document provides a framework in three parts: the ethical concerns AI adoption raises and how to mitigate them; the specific responsibilities that arise when AI intersects with open-source practice; and the human dimensions - learning, craft, and cognition - that must be protected as these tools become pervasive.
 
@@ -48,14 +48,14 @@ Research published in _Nature Scientific Reports_ highlights the cybersecurity r
 
 - Treat all AI-generated code as untrusted third-party code, subject to mandatory human review before merging.
 - Require at least two human reviewers for every change entering a codebase.
-- Always ensure input documents and data are sanitized or anonymized before feeding into agents.
+- Always ensure input documents and data are sanitized or anonymized before feeding them into agents.
 - Maintain best practice automated security review for repos: static code analysis, dependency scanning, vulnerability scanning, CI-based tests before merge.
 
 ### 1.2 Bias and Discrimination
 
-AI models are trained on internet-scale data that reflects existing societal biases. Research has shown LLMs associating specific ethnic groups with violence, reproducing gender stereotypes, and skewing outputs towards Western perspectives [3]. For organisations serving marginalised communities globally, this is not an abstract concern - it is an operational risk. AI-generated content, code, or analysis may silently encode assumptions that undermine the very populations an organisation exists to serve.
+AI models are trained on internet-scale data that reflects existing societal biases. Research has shown LLMs associating specific ethnic groups with violence, reproducing gender stereotypes, and skewing outputs toward Western perspectives [3]. For organizations serving marginalized communities globally, this is not an abstract concern - it is an operational risk. AI-generated content, code, or analysis may silently encode assumptions that undermine the very populations an organization exists to serve.
 
-In coding, bias can surface in less obvious ways: culturally narrow test data, dataset assumptions, internationalisation blind spots, and biased evaluation criteria in synthetic datasets.
+In coding, bias can surface in less obvious ways: culturally narrow test data, dataset assumptions, internationalization blind spots, and biased evaluation criteria in synthetic datasets.
 
 **Mitigation approaches:**
 
@@ -67,7 +67,7 @@ In coding, bias can surface in less obvious ways: culturally narrow test data, d
 
 ### 1.3 Environmental Cost
 
-Training large language models requires enormous computational resources. Each query consumes energy. For organisations with environmental or sustainability principles, uncritical adoption of AI tools creates a tension between productivity gains and ecological impact.
+Training large language models requires enormous computational resources. Each query consumes energy. For organizations with environmental or sustainability principles, uncritical adoption of AI tools creates a tension between productivity gains and ecological impact.
 
 **Mitigation approaches:**
 
@@ -75,11 +75,11 @@ Training large language models requires enormous computational resources. Each q
 - Use AI deliberately, not habitually.
 - Avoid vendor lock-in, maintaining the flexibility to shift to more efficient or open alternatives as they emerge.
 - Acknowledge environmental cost explicitly in AI use policies.
-- Consider offset strategies with regards to energy usage and emissions. Approximations in the [calculations appendix](#appendix-a-methodology-for-estimating-llm-energy--co-emissions-and-donation-proxy) recommend that a small team of 5 developers should donate ~$300 anually to offset.
+- Consider offset strategies with regard to energy usage and emissions. Approximations in the [calculations appendix](#appendix-a-methodology-for-estimating-llm-energy--co-emissions-and-donation-proxy) recommend that a small team of 5 developers should donate ~$300 annually to offset.
 
 ### 1.4 Labour and Exploitation
 
-The refinement of AI models often relies on low-paid human labour for data labelling and content moderation, frequently in low- and middle-income economies. The training data itself was often collected without consent from its creators. Using these tools means participating in a supply chain with unresolved ethical questions about consent, compensation, and intellectual property [20].
+The refinement of AI models often relies on low-paid human labor for data labeling and content moderation, frequently in low- and middle-income economies. The training data itself was often collected without consent from its creators. Using these tools means participating in a supply chain with unresolved ethical questions about consent, compensation, and intellectual property [20].
 
 **Mitigation approaches:**
 
@@ -98,13 +98,13 @@ Even 'open' models will generally contain traces of stolen training material.
 **Mitigation approaches:**
 
 - Contributors must review and understand generated code, without blindly accepting it.
-- Using code analysers and copyright detection tools such as ScanCode Toolkit, built into CI pipelines.
+- Use code analyzers and copyright detection tools such as ScanCode Toolkit, built into CI pipelines.
 - Substantial AI-generated contributions must be disclosed in commit messages.
-- Recognise that producing open-source work means it may itself become training data - but that does not remove the responsibility to ensure no infringements enter the commons.
+- Recognize that producing open-source work means it may itself become training data - but that does not remove the responsibility to ensure no infringements enter the commons.
 
 ### 1.6 Digital Divide and Equity
 
-AI coding tools are already more accessible to people in wealthy countries, and as the technology industry attempts to recoup its enormous capital investments, prices are likely to rise. At the same time, AI tools are eroding the equitable commons of free and open-source knowledge and universally accessible knowledge bases like Stack Exchange. There is a real risk of a two-tier system developing: massively powerful tools running in corporate data centres for the well-resourced, much less capable local instances for everyone else, and a diminished shared commons between the two [5].
+AI coding tools are already more accessible to people in wealthy countries, and as the technology industry attempts to recoup its enormous capital investments, prices are likely to rise. At the same time, AI tools are eroding the equitable commons of free and open-source knowledge and universally accessible knowledge bases like Stack Exchange. There is a real risk of a two-tier system developing: massively powerful tools running in corporate data centers for the well-resourced, much less capable local instances for everyone else, and a diminished shared commons between the two [5].
 
 **Mitigation approaches:**
 
@@ -126,11 +126,11 @@ Dries Buytaert, lead of the Drupal project, describes the core problem precisely
 
 The LLVM Project introduced the concept of an "extractive contribution" - one where the cost to maintainers of reviewing it exceeds the benefit to the project [4]. Before AI, posting a change for review signalled genuine interest from a potential long-term contributor. AI has decoupled effort from intent. A drive-by contributor can now generate a large patch in minutes and shift hours of review work onto volunteers.
 
-Daniel Stenberg, maintainer of curl, cancelled the project's bug bounty programme after AI-generated reports flooded his seven-person security team - fewer than one in twenty turned out to be real bugs. Yet in the same period, an AI security startup used AI well and found all 12 zero-day vulnerabilities in a recent OpenSSL security release, some hiding for over 25 years [7]. The difference was not whether AI was used. It was expertise and intent.
+Daniel Stenberg, maintainer of curl, canceled the project's bug bounty program after AI-generated reports flooded his seven-person security team - fewer than one in twenty turned out to be real bugs. Yet in the same period, an AI security startup used AI well and found all 12 zero-day vulnerabilities in a recent OpenSSL security release, some hiding for over 25 years [7]. The difference was not whether AI was used. It was expertise and intent.
 
 AI-generated code also frequently reinvents the wheel - producing custom implementations rather than leveraging well-tested community libraries. This creates fragmentation and shifts maintenance burden onto the ecosystem [8].
 
-**Mitigation: review discipline and contribution hygiene.** Good engineering practice matters more than ever. Organisations should formalise policies addressing AI in contributions. For practical guidance, see [Working with AI Tools as a Developer](/ai-assisted-coding-guide/) and [Repo Checklist](/managing-ai-contributions/).
+**Mitigation: review discipline and contribution hygiene.** Good engineering practice matters more than ever. Organizations should formalize policies addressing AI in contributions. For practical guidance, see [Working with AI Tools as a Developer](/ai-assisted-coding-guide/) and [Repo Checklist](/managing-ai-contributions/).
 
 Regardless of whether AI is used:
 
@@ -145,11 +145,11 @@ Regardless of whether AI is used:
 
 ### 2.2 Long-Term Maintenance
 
-While AI can be effective for quickly getting something up and running, it creates a significant pain point when it comes to maintaining or upgrading that code. If the people responsible for a codebase do not understand how it was built, they will eventually hit a wall - making maintenance, debugging, and upgrades extremely difficult. This can ultimately restrict an organisation's ability to build anything new, because it is trapped by code it cannot confidently modify [9].
+While AI can be effective for quickly getting something up and running, it creates a significant pain point when it comes to maintaining or upgrading that code. If the people responsible for a codebase do not understand how it was built, they will eventually hit a wall - making maintenance, debugging, and upgrades extremely difficult. This can ultimately restrict an organization's ability to build anything new, because it is trapped by code it cannot confidently modify [9].
 
 AI tools are demonstrably helpful when assisting someone who already understands the codebase and the broader technical landscape, but they are far less reliable as a substitute for that understanding.
 
-See [AI Assisted Coding Guide](/ai-assisted-coding-guide/#what-ai-is-good-for-appropriate-to-use-here) for details on appropriate usage of LLMs.
+See [AI-Assisted Coding Guide](/ai-assisted-coding-guide/#what-ai-is-good-for-appropriate-to-use-here) for details on appropriate usage of LLMs.
 
 ### 2.3 What Leading Projects Are Doing
 
@@ -159,7 +159,7 @@ Project responses range from cautious acceptance to outright bans. The landscape
 
 - **LLVM Project** - AI use permitted but must be disclosed. Contributors must understand and explain their code. "Good first issues" are reserved for human learning [4].
 - **Linux Kernel** - AI code accepted, but undisclosed use results in the contributor being banned [12].
-- **cURL** - AI contributions accepted with mandatory disclosure. Policy breach means a permanent ban. The bug bounty was cancelled after AI reports overwhelmed the team - only 5% of submissions identified real vulnerabilities [13], [10].
+- **cURL** - AI contributions accepted with mandatory disclosure. Policy breach means a permanent ban. The bug bounty was canceled after AI reports overwhelmed the team - only 5% of submissions identified real vulnerabilities [13], [10].
 - **CloudNativePG** - Permits AI-assisted contributions under strict human accountability rules. Contributors must fully understand and maintain AI-generated code, disclose usage via commit trailers, and _guarantee legal provenance_. "Shotgun refactoring" (wide-scale refactoring or clean-up), hallucinated features, and AI-written PR descriptions are explicitly prohibited. Maintainers reserve the right to close low-effort AI PRs without detailed critique [19].
 - **Apache Spark** - Every PR must disclose AI use. Of ~8,500 commits over 2.5 years, only ~1.5% disclosed AI, but the rate is accelerating sharply [11].
 - **Apache Airflow** - Updated contributing guidelines to require AI disclosure after a surge of low-quality AI-generated PRs [11].
@@ -172,7 +172,7 @@ Project responses range from cautious acceptance to outright bans. The landscape
 - **Debian** - Community remains undecided; a proposed General Resolution was withdrawn [17].
 - **FluxCD** - Aligning with CNCF; experimenting with AI guidelines in sub-projects [10].
 
-**Restrictive or ban approaches:**
+**Restrictive approaches or bans:**
 
 - **Ghostty** - Banned AI-generated PRs from external contributors after escalating from disclosure requirements. Maintainers themselves still use AI daily [10].
 - **tldraw** - Auto-closes all external PRs. The founder discovered his own AI-generated issue scripts were producing slop that contributors then fed to their own AI tools - "AI slop all the way down" [10].
@@ -183,7 +183,7 @@ The common thread: human accountability, transparent AI use, respect for maintai
 
 ---
 
-## 3. Sustaining Human Skill, Judgement, and Craft
+## 3. Sustaining Human Skill, Judgment, and Craft
 
 AI tools are powerful, but they interact with human cognition in ways that require deliberate management.
 
@@ -206,7 +206,7 @@ For small teams, this is a serious risk. If developers stop deeply understanding
 - When using AI for code generation, follow up with questions that build understanding - ask for explanations, probe edge cases, read the output critically.
 - Use AI as a pair-programmer, not an answer machine.
 - Encourage discussion of approach before generation.
-- Prioritise learning over speed, especially on unfamiliar tasks or technologies.
+- Prioritize learning over speed, especially on unfamiliar tasks or technologies.
 - Conduct regular internal reviews of architectural understanding.
 - Encourage spacing and reflection, not continuous prompting.
 
@@ -214,15 +214,15 @@ For small teams, this is a serious risk. If developers stop deeply understanding
 
 AI can generate syntactically correct code quickly. But framing the right problem, designing architecture, evaluating trade-offs, aligning with stakeholder needs, and mentoring others - these remain deeply human tasks. As AI handles more of the mechanical work of coding, it becomes _more_ important, not less, for human interaction to focus on problem framing, approach discussion, and alignment before setting AI to do the implementation work.
 
-This applies with particular force to junior developers. The errors and dead ends that feel frustrating during independent work are also where the deepest learning happens. Skipping that struggle in favour of AI-generated solutions can create a gap between apparent productivity and actual competence - one that may not become visible until something breaks in production.
+This applies with particular force to junior developers. The errors and dead ends that feel frustrating during independent work are also where the deepest learning happens. Skipping that struggle in favor of AI-generated solutions can create a gap between apparent productivity and actual competence - one that may not become visible until something breaks in production.
 
 **Practical commitments:**
 
 - Discuss design before generating implementation.
 - Encourage collaborative reasoning about approaches.
-- Use AI to accelerate execution - not replace judgement.
+- Use AI to accelerate execution - not replace judgment.
 - Protect time for difficult, meaningful problem-solving.
-- Recognise that enjoying the craft of coding and tackling hard problems is essential to team morale and professional growth.
+- Recognize that enjoying the craft of coding and tackling hard problems is essential to team morale and professional growth.
 
 ---
 
@@ -231,21 +231,21 @@ This applies with particular force to junior developers. The errors and dead end
 1. **Human accountability is non-negotiable.** AI assists; humans decide, review, and own the output.
 2. **Transparency is mandatory.** When AI is used, it should be disclosed - in code commits, in documents, in reports.
 3. **Protect your maintainers.** Never allow AI to increase the burden on those who review and maintain code without providing corresponding relief.
-4. **Prioritise learning over speed.** An organisation's greatest asset is its people. If AI adoption undermines their ability to learn and grow, the short-term productivity gain is not worth it.
+4. **Prioritize learning over speed.** An organization's greatest asset is its people. If AI adoption undermines their ability to learn and grow, the short-term productivity gain is not worth it.
 5. **Never input sensitive data into commercial AI tools.** Beneficiary data, personnel information, strategic documents, and donor details must not enter commercial AI systems without clear data governance.
 6. **Interrogate bias actively.** Every AI output that touches the communities you serve should be critically evaluated for embedded assumptions.
 7. **Respect the open-source commons.** Ensure AI-assisted contributions are high quality, transparent, and do not extract more from maintainers than they give back.
 8. **Champion equitable access.** Advocate for and invest in open-source models that can run locally, ensuring communities are not left behind.
 9. **Use fit-for-purpose models.** Match the tool to the task; do not default to the largest available model.
-10. **Always favour small, reviewable changes.** Good engineering discipline is the best defence against AI-generated complexity.
+10. **Always favor small, reviewable changes.** Good engineering discipline is the best defense against AI-generated complexity.
 
 ---
 
 ## Living Document Commitment
 
-AI capabilities, norms, and risks evolve rapidly. This document should be reviewed and updated at least every three months. Responsible AI adoption is not about maximising automation - it is about responsibly augmenting human capacity while protecting beneficiaries, contributors, the open-source ecosystem, and the long-term capability of teams.
+AI capabilities, norms, and risks evolve rapidly. This document should be reviewed and updated at least every three months. Responsible AI adoption is not about maximizing automation - it is about responsibly augmenting human capacity while protecting beneficiaries, contributors, the open-source ecosystem, and the long-term capability of teams.
 
-This framework is intended as a starting point for consultation among NGOs, civil society organisations, and mission-driven teams. Contributions, critique, and adaptation are welcome.
+This framework is intended as a starting point for consultation among NGOs, civil society organizations, and mission-driven teams. Contributions, critique, and adaptation are welcome.
 
 ---
 
@@ -299,13 +299,13 @@ This framework is intended as a starting point for consultation among NGOs, civi
 [18]: https://www.fightforthehuman.com/cognitive-helmets-for-the-ai-bicycle-part-1/ "Hicks, C. Cognitive helmets for the AI bicycle."
 [19]: https://github.com/cloudnative-pg/governance/blob/main/AI_POLICY.md "Cloud Native PG AI Usage Policy."
 [20]: https://doi.org/10.1353/sais.2024.a950958 "Artificial Intelligence Colonialism."
-[21]: https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study "Early-2025 AI-dev productivity"
-[22]: https://arxiv.org/abs/2601.20245 "How AI Impacts Skill Formation"
+[21]: https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study "Early-2025 AI-dev productivity."
+[22]: https://arxiv.org/abs/2601.20245 "How AI Impacts Skill Formation."
 [23]: https://epoch.ai/gradient-updates/how-much-energy-does-chatgpt-use "How much energy does ChatGPT use?"
-[24]: https://help.openai.com/en/articles/9903489-data-residency-and-inference-residency-for-chatgpt "OpenAI Data Residency Docs"
-[25]: https://www.iea.org/reports/electricity-2025/emissions "International Energy Agency Global Emissions Report"
-[26]: https://www.founderspledge.com/research/climate-and-lifestyle-report "Founders Pledge Climate And Lifestyle Report"
-[27]: https://www.effectiveenvironmentalism.org/climate-charities "Effective Environmentalism Climate Charity Recommendations"
+[24]: https://help.openai.com/en/articles/9903489-data-residency-and-inference-residency-for-chatgpt "OpenAI Data Residency Docs."
+[25]: https://www.iea.org/reports/electricity-2025/emissions "International Energy Agency Global Emissions Report."
+[26]: https://www.founderspledge.com/research/climate-and-lifestyle-report "Founders Pledge Climate And Lifestyle Report."
+[27]: https://www.effectiveenvironmentalism.org/climate-charities "Effective Environmentalism Climate Charity Recommendations."
 
 ## Additional Sources
 
@@ -319,7 +319,7 @@ The following sources informed the development of this framework but are not dir
 
 ---
 
-_Disclaimer: Initial content summarised by Claude Opus 4.6 from the sources listed above, then manually reviewed and edited. This document is released for consultation and collaborative refinement._
+_Disclaimer: Initial content summarized by Claude Opus 4.6 from the sources listed above, then manually reviewed and edited. This document is released for consultation and collaborative refinement._
 
 ---
 
@@ -333,7 +333,7 @@ Below are some simple 'back-of-the-envelope' calculations to give a rough estima
 
 The most accurate approach would be to average token use per team member on a given provider.
 
-However, as we do not have a procriptive usage policy, and developers can use open models, we need approximations:
+However, as we do not have a prescriptive usage policy, and developers can use open models, we need approximations:
 
 - 5 team members using LLMs.
 - 64hrs potential LLM usage per team member, per month (4 day work week, 8hrs a day, average of 4hrs available for coding).
@@ -341,7 +341,7 @@ However, as we do not have a procriptive usage policy, and developers can use op
 
 **6400 prompts per month**
 
-### 2. Convert Queries to Electricty Usage
+### 2. Convert Queries to Electricity Usage
 
 - A recent analysis by Epoch AI [23] gave an estimate of ~0.0003 kWh per query to GPT-4o, for a 100 word context.
 - There are no official published per-query figures for models like Opus 4.6.
@@ -354,9 +354,9 @@ Energy per query: ~0.018 kWh
 ### 3. Convert Electricity to CO₂ Emissions
 
 - This depends on **where the compute actually runs**, which is hard to determine.
-- For example, OpenAI API inference can be hosted in multiple regions (Europe, USA, Singapore, Japan, India), as per their [data residency docs](https://help.openai.com/en/articles/9903489-data-residency-and-inference-residency-for-chatgpt)
+- For example, OpenAI API inference can be hosted in multiple regions (Europe, USA, Singapore, Japan, India), as per their [data residency docs](https://help.openai.com/en/articles/9903489-data-residency-and-inference-residency-for-chatgpt).
 - Based on an International Energy Agency 2025 report [25], global grid CO₂ intensity can be estimated at ~445 gCO₂/kWh.
-- More accurate estimates per-country can be found via the [Electricity Maps Project](https://www.electricitymaps.com)
+- More accurate estimates per country can be found via the [Electricity Maps Project](https://www.electricitymaps.com).
 
 tCO₂e = kWh_total × (gCO₂/kWh / 1000 / 1000)
 
@@ -367,6 +367,6 @@ tCO₂e = kWh_total × (gCO₂/kWh / 1000 / 1000)
 - Research by Founders Pledge, suggests that donating 1000 USD to effective climate advocacy charities could avert approximately 100 tCO₂ from being omitted (expected-value estimate for high-impact policy/advocacy orgs) [26].
 - **This does not offset emissions made, nor negate your personal responsibility to reduce your footprint**.
 - However, considering how uncommon this type of donation is (for corporate entities that typically do not care much), it could be argued that this is an acceptable mitigation strategy at this scale, by proxy.
-- Let's add another fudge factor of 100x to factor in additional uncertainties: model used and frequency used, inaccuracies in various approximations. This is gives us a nicely pesimistic estimate of ~2.55 tCO₂.
+- Let's add another fudge factor of 100x to account for additional uncertainties: model used, frequency of use, and inaccuracies in various approximations. This gives us a nicely pessimistic estimate of ~2.55 tCO₂.
 
 Recommendation: **~26 USD donation per month**, for a team of 5 devs using LLM assistance.
