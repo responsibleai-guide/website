@@ -1,6 +1,7 @@
 ---
 layout: base.njk
 title: Using LLMs Responsibly
+description: A living framework for NGOs, civil society organizations, and mission-driven teams navigating AI adoption in software development.
 ---
 
 # Using LLMs to Develop Software: Ethics, Risks, and Responsible Practice
@@ -17,10 +18,10 @@ This framework was built in collaboration and is adopted by the following partne
 
 <div class="collaborator-logos">
   <a href="https://www.hotosm.org" target="_blank" rel="noopener noreferrer">
-    <img src="/images/hotosm-logo.png" alt="Humanitarian OpenStreetMap Team">
+    <img src="/images/hotosm-logo.png" alt="Humanitarian OpenStreetMap Team" width="330" height="80" loading="lazy">
   </a>
   <a href="https://510.global" target="_blank" rel="noopener noreferrer">
-    <img src="/images/501-nl-red-cross-logo.jpg" alt="510 NL Red Cross">
+    <img src="/images/501-nl-red-cross-logo.jpg" alt="510 NL Red Cross" width="1221" height="289" loading="lazy">
   </a>
 </div>
 

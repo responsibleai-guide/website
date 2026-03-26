@@ -1,6 +1,7 @@
 ---
 layout: base.njk
 title: AI-Assisted Coding Guide
+description: Boundaries, workflows, and expectations for AI-assisted development.
 ---
 
 # Practical Guide: Working with AI Tools as a Developer

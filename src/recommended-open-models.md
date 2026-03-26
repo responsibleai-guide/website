@@ -1,6 +1,7 @@
 ---
 layout: base.njk
 title: Recommended Open Models
+description: Research and recommendations for the best open models to use as alternatives to proprietary AI services.
 ---
 
 # Recommended Open Models

@@ -4,6 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title }} - Responsible AI Guide</title>
+  {% if description %}<meta name="description" content="{{ description }}">{% endif %}
+  <link rel="canonical" href="https://responsibleai.guide{{ page.url }}">
+  <meta property="og:title" content="{{ title }} - Responsible AI Guide">
+  {% if description %}<meta property="og:description" content="{{ description }}">{% endif %}
+  <meta property="og:url" content="https://responsibleai.guide{{ page.url }}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Responsible AI Guide">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ title }} - Responsible AI Guide">
+  {% if description %}<meta name="twitter:description" content="{{ description }}">{% endif %}
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>

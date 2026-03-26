@@ -1,6 +1,7 @@
 ---
 layout: base.njk
 title: Managing AI Contributions
+description: What every repo needs to handle AI contributions responsibly.
 ---
 
 # Repo Checklist: Accepting AI-Assisted Contributions

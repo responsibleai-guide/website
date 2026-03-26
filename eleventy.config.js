@@ -1,7 +1,23 @@
-module.exports = function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy("src/css");
+import { transform } from "lightningcss";
+
+export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/images");
   eleventyConfig.addPassthroughCopy("src/CNAME");
+  eleventyConfig.addPassthroughCopy("src/robots.txt");
+
+  eleventyConfig.addTemplateFormats("css");
+  eleventyConfig.addExtension("css", {
+    outputFileExtension: "css",
+    compile(inputContent) {
+      return () => {
+        const { code } = transform({
+          code: Buffer.from(inputContent),
+          minify: true,
+        });
+        return code.toString();
+      };
+    },
+  });
 
   return {
     dir: {
@@ -13,4 +29,4 @@ module.exports = function (eleventyConfig) {
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
   };
-};
+}
