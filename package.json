@@ -8,5 +8,6 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0"
-  }
+  },
+  "packageManager": "pnpm@10.30.3"
 }
