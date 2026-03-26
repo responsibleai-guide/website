@@ -53,6 +53,31 @@ body {
   position: relative;
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.github-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-muted);
+  padding: 0.35rem;
+  border-radius: 6px;
+  transition: color 0.15s, background 0.15s;
+  text-decoration: none;
+}
+.github-link:hover {
+  color: var(--color-text);
+  background: var(--color-surface);
+}
+
 .site-title {
   font-weight: 700;
   font-size: 1.1rem;
@@ -106,10 +131,6 @@ body {
 @media (max-width: 820px) {
   .nav-toggle {
     display: flex;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
   }
   .nav-links {
     display: none;
