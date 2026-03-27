@@ -23,6 +23,9 @@ This framework was built in collaboration and is adopted by the following partne
   <a href="https://510.global" target="_blank" rel="noopener noreferrer">
     <img src="/images/501-nl-red-cross-logo.jpg" alt="510 NL Red Cross" width="1221" height="289" loading="lazy">
   </a>
+  <a href="https://www.opengis.ch" target="_blank" rel="noopener noreferrer">
+    <img src="/images/opengisch-logo.png" alt="OPENGIS.ch" width="400" height="120" loading="lazy">
+  </a>
 </div>
 
 ## Introduction
