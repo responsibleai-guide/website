@@ -26,6 +26,9 @@ This framework was built in collaboration and is adopted by the following partne
   <a href="https://www.opengis.ch" target="_blank" rel="noopener noreferrer">
     <img src="/images/opengisch-logo.png" alt="OPENGIS.ch" width="400" height="120" loading="lazy">
   </a>
+  <a href="https://www.geocat.net" target="_blank" rel="noopener noreferrer">
+    <img src="/images/geocat-logo.png" alt="GeoCat" width="1222" height="268" loading="lazy">
+  </a>
 </div>
 
 ## Introduction
