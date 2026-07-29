@@ -8,7 +8,7 @@ description: Research and recommendations for the best open models to use as alt
 
 ## Qwen3.6-27B
 
-[Qwen3.6-27B](https://huggingface.co/Qwen/Qwen3.6-27B) is a Causal Language Model with Vision Encoder. It features 28B parameters, and it can run on a domestic GPU (like the Nvidia 5060 ti).
+[Qwen3.6-27B](https://huggingface.co/Qwen/Qwen3.6-27B) is a Causal Language Model with Vision Encoder. It features 27B parameters, and it can run on a domestic GPU (like the Nvidia 5060 ti).
 
 This model can be reliably used for small programming tasks, such as updating features on zensical or mkdocs projects, or round-trips between CSV and markdown.
 
