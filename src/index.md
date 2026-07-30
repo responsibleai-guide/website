@@ -29,6 +29,9 @@ This framework was built in collaboration and is adopted by the following partne
   <a href="https://www.geocat.net" target="_blank" rel="noopener noreferrer">
     <img src="/images/geocat-logo.png" alt="GeoCat" width="1222" height="268" loading="lazy">
   </a>
+  <a href="https://byteroad.net/" target="_blank" rel="noopener noreferrer">
+    <img src="/images/byteroad-logo.png" alt="ByteRoad" width="1222" height="268" loading="lazy">
+  </a>
 </div>
 
 ## Introduction
