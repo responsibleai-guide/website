@@ -170,13 +170,14 @@ Project responses range from cautious acceptance to outright bans. The landscape
 - **CloudNativePG** - Permits AI-assisted contributions under strict human accountability rules. Contributors must fully understand and maintain AI-generated code, disclose usage via commit trailers, and _guarantee legal provenance_. "Shotgun refactoring" (wide-scale refactoring or clean-up), hallucinated features, and AI-written PR descriptions are explicitly prohibited. Maintainers reserve the right to close low-effort AI PRs without detailed critique [19].
 - **Apache Spark** - Every PR must disclose AI use. Of ~8,500 commits over 2.5 years, only ~1.5% disclosed AI, but the rate is accelerating sharply [11].
 - **Apache Airflow** - Updated contributing guidelines to require AI disclosure after a surge of low-quality AI-generated PRs [11].
+- **GeoServer** - Permits AI-assisted contributions with responsibility, understanding, and correctness requirements. Additional feasibility guidance on contributor overreach, and maintainability guidance to address complexity. AI policy extends to use for security vulnerability reports and community communication channels [28].
 
 **Still navigating:**
 
 - **CPython** - No formal policy yet, though AI-co-authored commits are appearing. Python's centrality to the AI ecosystem makes its eventual stance significant [11].
 - **QGIS / GDAL** - Drafting transparency and accountability policies [14, 15].
 - **OpenDroneMap** - Still in active discussion with differing opinions within the community [16].
-- **Debian** - Community remains undecided; a proposed General Resolution was withdrawn [17].
+- **Debian** - A General Resolution on LLM usage went to a vote in August 2026, with proposals ranging from a full ban written into the Social Contract to conditional acceptance [17].
 - **FluxCD** - Aligning with CNCF; experimenting with AI guidelines in sub-projects [10].
 
 **Restrictive approaches or bans:**
@@ -274,7 +275,7 @@ This framework is intended as a starting point for consultation among NGOs, civi
 14. [QGIS Enhancement Proposal. AI Tool Policy.](https://github.com/qgis/QGIS-Enhancement-Proposals/pull/363)
 15. [GDAL AI Tool Policy.](https://gdal--13880.org.readthedocs.build/en/13880/community/ai_tool_policy.html)
 16. [OpenDroneMap AI contribution policy discussion.](https://github.com/OpenDroneMap/documents/pull/4)
-17. [Debian AI General Resolution withdrawn.](https://lwn.net/Articles/1020968/)
+17. [Debian General Resolution: LLM usage in Debian.](https://www.debian.org/vote/2026/vote_002)
 18. Hicks, C. [Cognitive helmets for the AI bicycle.](https://www.fightforthehuman.com/cognitive-helmets-for-the-ai-bicycle-part-1/)
 19. [Cloud Native PG AI Usage Policy](https://github.com/cloudnative-pg/governance/blob/main/AI_POLICY.md)
 20. Regilme, S.S.F. (2024). [Artificial Intelligence Colonialism](https://doi.org/10.1353/sais.2024.a950958)
@@ -285,6 +286,7 @@ This framework is intended as a starting point for consultation among NGOs, civi
 25. International Energy Agency. [Global Emissions Report](https://www.iea.org/reports/electricity-2025/emissions)
 26. Founders Pledge. [Climate And Lifestyle Report](https://www.founderspledge.com/research/climate-and-lifestyle-report)
 27. Effective Environmentalism. [Climate Charity Recommendations](https://www.effectiveenvironmentalism.org/climate-charities)
+28. GeoServer Project. [AI Policy.](https://geoserver.org/ai)
 
 [1]: https://x.com/karpathy/status/2019137879310836075 "Karpathy, A. (2025–2026). From 'vibe coding' to 'agentic engineering.'"
 [2]: https://www.nature.com/articles/s41598-025-34350-3 "Nature Scientific Reports (2026). Cybersecurity risks in AI-generated code."
@@ -302,7 +304,7 @@ This framework is intended as a starting point for consultation among NGOs, civi
 [14]: https://github.com/qgis/QGIS-Enhancement-Proposals/pull/363 "QGIS Enhancement Proposal. AI Tool Policy."
 [15]: https://gdal--13880.org.readthedocs.build/en/13880/community/ai_tool_policy.html "GDAL AI Tool Policy."
 [16]: https://github.com/OpenDroneMap/documents/pull/4 "OpenDroneMap AI contribution policy discussion."
-[17]: https://lwn.net/Articles/1020968/ "Debian AI General Resolution withdrawn."
+[17]: https://www.debian.org/vote/2026/vote_002 "Debian General Resolution: LLM usage in Debian."
 [18]: https://www.fightforthehuman.com/cognitive-helmets-for-the-ai-bicycle-part-1/ "Hicks, C. Cognitive helmets for the AI bicycle."
 [19]: https://github.com/cloudnative-pg/governance/blob/main/AI_POLICY.md "Cloud Native PG AI Usage Policy."
 [20]: https://doi.org/10.1353/sais.2024.a950958 "Artificial Intelligence Colonialism."
@@ -313,6 +315,7 @@ This framework is intended as a starting point for consultation among NGOs, civi
 [25]: https://www.iea.org/reports/electricity-2025/emissions "International Energy Agency Global Emissions Report."
 [26]: https://www.founderspledge.com/research/climate-and-lifestyle-report "Founders Pledge Climate And Lifestyle Report."
 [27]: https://www.effectiveenvironmentalism.org/climate-charities "Effective Environmentalism Climate Charity Recommendations."
+[28]: https://geoserver.org/ai "GeoServer Project AI Policy."
 
 ## Additional Sources
 
