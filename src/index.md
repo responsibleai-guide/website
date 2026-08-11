@@ -92,6 +92,7 @@ The energy used by each LLM prompt does not tell the full story. When considerin
 - Use AI deliberately, not habitually.
 - Avoid vendor lock-in, maintaining the flexibility to shift to more efficient or open alternatives as they emerge.
 - Acknowledge environmental cost explicitly in AI use policies.
+- Collective advocacy on data center location and energy policy has more leverage than individual restraint [40], [41]. But, note that this evidence is almost entirely US based and is not a substitute for adequate government oversight [42].
 - Consider offset strategies with regard to energy usage and emissions, as a secondary method to alleviate environmental strain. Approximations in the [calculations appendix](#appendix-a-methodology-for-estimating-llm-energy--co-emissions-and-donation-proxy) recommend that a small team of 5 developers should donate ~$300 annually to offset.
 
 ### 1.4 Labour and Exploitation
@@ -309,6 +310,9 @@ This framework is intended as a starting point for consultation among NGOs, civi
 37. Zitron, E. (2026). [The More You Buy, The More You Lose.](https://www.wheresyoured.at/the-more-you-buy-the-more-you-lose/) Where's Your Ed At. Documents hyperscaler capacity commitments, circular financing between AI labs and their suppliers, and the resulting component demand loop.
 38. METR (2026). [We Are Changing Our Developer Productivity Experiment Design.](https://metr.org/blog/2026-02-24-uplift-update/)
 39. Schilke, O. & Reimann, M. (2025). [The Transparency Dilemma: How AI Disclosure Erodes Trust.](https://doi.org/10.1016/j.obhdp.2024.104405) Organizational Behavior and Human Decision Processes.
+40. Data Center Watch (2026). [$64 Billion of Data Center Projects Blocked or Delayed.](https://www.datacenterwatch.org/report)
+41. Food & Water Watch (2026). [How to Stop a Data Center Near You.](https://www.foodandwaterwatch.org/2026/03/05/how-to-stop-a-data-center-near-you/)
+42. Brookings (2026). [Data Center Moratoriums Are Not a Substitute for Oversight.](https://www.brookings.edu/articles/data-center-moratoriums-are-not-a-substitute-for-oversight/)
 
 [1]: https://x.com/karpathy/status/2019137879310836075 "Karpathy, A. (2025–2026). From 'vibe coding' to 'agentic engineering.'"
 [2]: https://www.nature.com/articles/s41598-025-34350-3 "Nature Scientific Reports (2026). Cybersecurity risks in AI-generated code."
@@ -349,6 +353,9 @@ This framework is intended as a starting point for consultation among NGOs, civi
 [37]: https://www.wheresyoured.at/the-more-you-buy-the-more-you-lose/ "Zitron, E. The More You Buy, The More You Lose."
 [38]: https://metr.org/blog/2026-02-24-uplift-update/ "METR 2026 uplift update."
 [39]: https://doi.org/10.1016/j.obhdp.2024.104405 "The Transparency Dilemma."
+[40]: https://www.datacenterwatch.org/report "Data Center Watch report."
+[41]: https://www.foodandwaterwatch.org/2026/03/05/how-to-stop-a-data-center-near-you/ "How to Stop a Data Center Near You."
+[42]: https://www.brookings.edu/articles/data-center-moratoriums-are-not-a-substitute-for-oversight/ "Data Center Moratoriums Are Not a Substitute for Oversight."
 
 ## Additional Sources
 
