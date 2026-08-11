@@ -80,7 +80,9 @@ In coding, bias can surface in less obvious ways: culturally narrow test data, d
 
 ### 1.3 Environmental Cost
 
-Training large language models requires enormous computational resources. Each query consumes energy. For organizations with environmental or sustainability principles, uncritical adoption of AI tools creates a tension between productivity gains and ecological impact.
+Training large language models requires enormous computational resources. Each query consumes energy. For organizations with environmental or sustainability principles, adoption of AI tools creates a tension between productivity gains and ecological impact.
+
+The energy used by each LLM prompt does not tell the full story. When considering this point, the wider implications on society should be considered. The electricity consumption may be small per-prompt (see [calculations appendix](#appendix-a-methodology-for-estimating-llm-energy--co-emissions-and-donation-proxy)), but usage of proprietary LLM services overall sends a signal to corporations running them that they are desirable. We end up with a feedback loop: people/businesses use AI → utilization/revenue expectations rise → labs demand compute → cloud providers commit capacity → financing becomes available → GPUs/servers get ordered → component production expands → data centers get constructed → utilities add generation/transmission → decades-long physical assets exist [37]. This entire chain has huge repercussions on long term environmental impact.
 
 **Mitigation approaches:**
 
@@ -88,7 +90,7 @@ Training large language models requires enormous computational resources. Each q
 - Use AI deliberately, not habitually.
 - Avoid vendor lock-in, maintaining the flexibility to shift to more efficient or open alternatives as they emerge.
 - Acknowledge environmental cost explicitly in AI use policies.
-- Consider offset strategies with regard to energy usage and emissions. Approximations in the [calculations appendix](#appendix-a-methodology-for-estimating-llm-energy--co-emissions-and-donation-proxy) recommend that a small team of 5 developers should donate ~$300 annually to offset.
+- Consider offset strategies with regard to energy usage and emissions, as a secondary method to alleviate environmental strain. Approximations in the [calculations appendix](#appendix-a-methodology-for-estimating-llm-energy--co-emissions-and-donation-proxy) recommend that a small team of 5 developers should donate ~$300 annually to offset.
 
 ### 1.4 Labour and Exploitation
 
@@ -301,6 +303,8 @@ This framework is intended as a starting point for consultation among NGOs, civi
 33. Anthropic (2026). [Project Glasswing: An Initial Update.](https://www.anthropic.com/research/glasswing-initial-update)
 34. Oviedo, F. et al. (2026). [Energy Use of AI Inference: Efficiency Pathways and Test-Time Scaling.](https://arxiv.org/abs/2509.20241) Joule.
 35. Jegham, N. et al. (2025). [How Hungry is AI? Benchmarking Energy, Water, and Carbon Footprint of LLM Inference.](https://arxiv.org/abs/2505.09598)
+36. Masley, A. (2025). [A Cheat Sheet for Conversations About AI's Environmental Impact.](https://blog.andymasley.com/p/a-cheat-sheet-for-conversations-about) Argues individual AI use is climate-negligible; cited here as a counterpoint.
+37. Zitron, E. (2026). [The More You Buy, The More You Lose.](https://www.wheresyoured.at/the-more-you-buy-the-more-you-lose/) Where's Your Ed At. Documents hyperscaler capacity commitments, circular financing between AI labs and their suppliers, and the resulting component demand loop.
 
 [1]: https://x.com/karpathy/status/2019137879310836075 "Karpathy, A. (2025–2026). From 'vibe coding' to 'agentic engineering.'"
 [2]: https://www.nature.com/articles/s41598-025-34350-3 "Nature Scientific Reports (2026). Cybersecurity risks in AI-generated code."
@@ -337,6 +341,8 @@ This framework is intended as a starting point for consultation among NGOs, civi
 [33]: https://www.anthropic.com/research/glasswing-initial-update "Anthropic: Project Glasswing initial update."
 [34]: https://arxiv.org/abs/2509.20241 "Energy Use of AI Inference: Efficiency Pathways and Test-Time Scaling."
 [35]: https://arxiv.org/abs/2505.09598 "How Hungry is AI? Benchmarking Energy, Water, and Carbon Footprint of LLM Inference."
+[36]: https://blog.andymasley.com/p/a-cheat-sheet-for-conversations-about "Masley, A. A cheat sheet for conversations about AI's environmental impact."
+[37]: https://www.wheresyoured.at/the-more-you-buy-the-more-you-lose/ "Zitron, E. The More You Buy, The More You Lose."
 
 ## Additional Sources
 
@@ -401,5 +407,6 @@ tCO₂e = kWh_total × (gCO₂/kWh / 1000 / 1000)
 - **This does not offset emissions made, nor negate your personal responsibility to reduce your footprint**.
 - However, considering how uncommon this type of donation is (for corporate entities that typically do not care much), it could be argued that this is an acceptable mitigation strategy at this scale, by proxy.
 - Let's add another fudge factor of 100x to account for additional uncertainties: model used, frequency of use, and inaccuracies in various approximations. This gives us a nicely pessimistic estimate of ~2.3 tCO₂.
+- This 100x factor is a deliberate margin of safety, not an emissions estimate: the unmultiplied proxy cost is only a few dollars per year, and good-faith critics argue that multipliers like this overstate the real footprint [36]. We keep it because it also stands in for training amortisation and for costs we cannot price here.
 
 Recommendation: **~23 USD donation per month**, for a team of 5 devs using LLM assistance.
