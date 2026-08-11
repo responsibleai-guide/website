@@ -114,14 +114,17 @@ As investigative journalism and studies catch up, data supporting this is growin
 
 Current AI models raise unresolved questions about copyright. The LLVM Project's AI policy states it clearly: using AI tools to regenerate copyrighted material does not remove the copyright, and contributors remain responsible for ensuring nothing infringing enters their work [4]. The risk includes inadvertently incorporating copyrighted code or text into publicly released outputs.
 
-Unfortunately, there are not many strategies to avoid the underlying ethical concern of stolen intellectual property, aside from not using the models.
-Even 'open' models will generally contain traces of stolen training material.
+The law is getting clearer on three points. You only own AI-generated code if you meaningfully shaped it; prompting alone does not make you the author [56], and code nobody owns cannot be covered by your project's license. The main live lawsuit against GitHub Copilot is not about copying code, but about license and credit notices being stripped out [59], so keep those notices intact. Legal trouble has so far landed on the companies that trained on pirated material, not on the people using the tools [58]. In the EU, providers must now publish a summary of their training data [57], which is worth checking when picking a tool.
+
+There is no way to fully avoid the underlying ethical problem - training material taken without consent - short of not using the models. Most models called 'open' only release their weights, and their training data carries the same problems as proprietary models. A small number are trained only on openly licensed material - see [recommended open models](/recommended-open-models/).
 
 **Mitigation approaches:**
 
 - Contributors must review and understand generated code, without blindly accepting it.
-- Use code analyzers and copyright detection tools such as ScanCode Toolkit, built into CI pipelines.
+- Focus copyright review on the novel parts. Boilerplate and conventional patterns are not copyrightable whoever writes them; but if generated code contains a genuinely original approach or algorithm, assume it came from someone else's work and do not use it.
+- Use code analyzers and copyright detection tools such as ScanCode Toolkit, built into CI pipelines, to catch copied code and missing license headers.
 - Substantial AI-generated contributions must be disclosed in commit messages.
+- Check that your AI tool's terms of service are compatible with your project's license.
 - Recognize that producing open-source work means it may itself become training data - but that does not remove the responsibility to ensure no infringements enter the commons.
 
 ### 1.6 Digital Divide and Equity
@@ -342,6 +345,10 @@ This framework is intended as a starting point for consultation among NGOs, civi
 53. GitClear (2026). [The AI Code Quality Maintainability Gap.](https://www.gitclear.com/the_ai_code_quality_maintainability_gap)
 54. Nhando, D. (2026). [Uncovering the Humanitarian and Nonprofit Sectors' AI Governance Crisis.](https://www.techpolicy.press/uncovering-the-humanitarian-and-nonprofit-sectors-ai-governance-crisis/) TechPolicy.Press.
 55. Parkinson, K.M. (2026). [How Are Humanitarians Using AI in 2026?](https://www.humanitarianleadershipacademy.org/resources/opinion-how-are-humanitarians-using-ai-in-2026-the-case-for-governance-and-local-leadership/) Humanitarian Leadership Academy.
+56. US Copyright Office (2025). [Copyright and Artificial Intelligence, Part 2: Copyrightability.](https://www.copyright.gov/ai/)
+57. EU AI Act. [Article 53: Obligations for Providers of General-Purpose AI Models.](https://artificialintelligenceact.eu/article/53/)
+58. Authors Guild (2025). [What Authors Need to Know About the Anthropic Settlement.](https://authorsguild.org/advocacy/artificial-intelligence/what-authors-need-to-know-about-the-anthropic-settlement/)
+59. Joseph Saveri Law Firm. [GitHub Copilot Litigation.](https://githubcopilotlitigation.com/)
 
 [1]: https://x.com/karpathy/status/2019137879310836075 "Karpathy, A. (2025–2026). From 'vibe coding' to 'agentic engineering.'"
 [2]: https://www.nature.com/articles/s41598-025-34350-3 "Nature Scientific Reports (2026). Cybersecurity risks in AI-generated code."
@@ -398,6 +405,10 @@ This framework is intended as a starting point for consultation among NGOs, civi
 [53]: https://www.gitclear.com/the_ai_code_quality_maintainability_gap "The AI Code Quality Maintainability Gap."
 [54]: https://www.techpolicy.press/uncovering-the-humanitarian-and-nonprofit-sectors-ai-governance-crisis/ "The Humanitarian and Nonprofit Sectors' AI Governance Crisis."
 [55]: https://www.humanitarianleadershipacademy.org/resources/opinion-how-are-humanitarians-using-ai-in-2026-the-case-for-governance-and-local-leadership/ "How Are Humanitarians Using AI in 2026?"
+[56]: https://www.copyright.gov/ai/ "Copyright and Artificial Intelligence, Part 2."
+[57]: https://artificialintelligenceact.eu/article/53/ "EU AI Act Article 53."
+[58]: https://authorsguild.org/advocacy/artificial-intelligence/what-authors-need-to-know-about-the-anthropic-settlement/ "The Anthropic Settlement."
+[59]: https://githubcopilotlitigation.com/ "GitHub Copilot Litigation."
 
 ## Additional Sources
 
