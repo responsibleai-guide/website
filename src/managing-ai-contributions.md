@@ -59,7 +59,7 @@ For full policy details, see: [AI-assisted coding guide](/ai-assisted-coding-gui
 
 Update `.github/PULL_REQUEST_TEMPLATE.md` to include an AI section. It should be lightweight - one checkbox and a few optional fields. Don't make it burdensome or people will skip it.
 
-Ensure contributors are not penalized for using AI tools: honesty should be encouraged else [disclosure will stop](https://doi.org/10.1016/j.obhdp.2024.104405).
+Ensure contributors are not penalized for using AI tools: honesty should be encouraged else [disclosure will stop][disclosure-penalty].
 
 **Recommended template:**
 
@@ -128,7 +128,7 @@ feat: add password strength indicator to registration
 Assisted-by: Claude
 ```
 
-Several projects use this convention (LLVM, Fedora, QGIS), though it is not a standard: [Kubernetes prohibits AI trailers](https://kubernetes.io/blog/2026/06/26/open-source-maintainership-in-the-age-of-ai) and requires disclosure in the PR description instead. The main goal is to help maintainers decide on how to best review the code, without being punitive.
+Several projects use this convention (LLVM, Fedora, QGIS), though it is not a standard: [Kubernetes prohibits AI trailers][k8s-maintainership] and requires disclosure in the PR description instead. The main goal is to help maintainers decide on how to best review the code, without being punitive.
 
 ### 5. Maintain a solid CI pipeline
 
@@ -162,8 +162,8 @@ CI pipeline tools can catch what human review misses:
   - Unnecessary docstrings, for plainly obvious code functionality, e.g. a very simple function.
   - Strange variable names that you wouldn't typically see a human using.
   - Overly conformist and 'perfect' looking, lacking the messy or individual style of human developers.
-- There are experimental approaches [source 1](https://github.com/thinkst/zippy)[source 2](https://github.com/YerbaPage/DetectCodeGPT) to automate this identification, however, strong caution should be used if integrating them into an automated pipeline as AI text detectors [misclassify the majority of non-native English writers as AI](https://arxiv.org/abs/2304.02819).
-- There is also a worrying trend of fully automated bot 'agents' making PRs to open-source projects [source 1](https://thehackernews.com/2026/08/claude-mythos-5-tried-to-backdoor-real.html):
+- There are experimental approaches [source 1][zippy][source 2][detect-code-gpt] to automate this identification, however, strong caution should be used if integrating them into an automated pipeline as AI text detectors [misclassify the majority of non-native English writers as AI][detector-bias].
+- There is also a worrying trend of fully automated bot 'agents' making PRs to open-source projects [source 1][bot-pr-backdoor]:
   - It's _generally_ possible to identify this as AI-generated _for now_ by asking questions about the code and checking responses.
   - Telltale signs of a bot account: frequency of PRs open across a large range of repos, number of forks made in a short space of time, integration with OpenClaw or other 'AI assistant' tools.
   - Perhaps a list of 'bot' accounts could be compiled and included in a CI action to flag PRs as AI?
@@ -177,7 +177,7 @@ CI pipeline tools can catch what human review misses:
 - Use a standard response for non-compliant PRs (template below).
 - If a contributor cannot answer basic questions about their code, the PR is not ready.
 - If a contributor intentionally breaks rules laid out in the provided AI contribution policy, they may be subject to a 'ban' on future submissions (in the worst case, it is possible to block someone from interacting with organization or personal account repos).
-- To measure AI's impact on your maintainers, track review time and outcomes rather than contribution counts. Most community health metrics [predate AI-speed contributions](https://nesbitt.io/2026/05/27/chaoss-metrics-in-2026.html) and now mostly measure how susceptible a project is to AI-assisted abuse.
+- To measure AI's impact on your maintainers, track review time and outcomes rather than contribution counts. Most community health metrics [predate AI-speed contributions][chaoss-metrics] and now mostly measure how susceptible a project is to AI-assisted abuse.
 
 **Response template for non-compliant PRs:**
 
@@ -203,3 +203,11 @@ CI pipeline tools can catch what human review misses:
 [scancode]: https://github.com/aboutcode-org/scancode-toolkit
 [contributor-agreement-example]: https://github.com/hotosm/field-tm/blob/dev/.github/workflows/contribution-agreement.yml
 [madr]: https://adr.github.io/madr/
+[visidata]: https://www.visidata.org/blog/2026/ai/
+[disclosure-penalty]: https://doi.org/10.1016/j.obhdp.2024.104405
+[k8s-maintainership]: https://kubernetes.io/blog/2026/06/26/open-source-maintainership-in-the-age-of-ai
+[zippy]: https://github.com/thinkst/zippy
+[detect-code-gpt]: https://github.com/YerbaPage/DetectCodeGPT
+[detector-bias]: https://arxiv.org/abs/2304.02819
+[bot-pr-backdoor]: https://thehackernews.com/2026/08/claude-mythos-5-tried-to-backdoor-real.html
+[chaoss-metrics]: https://nesbitt.io/2026/05/27/chaoss-metrics-in-2026.html
