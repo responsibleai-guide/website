@@ -36,7 +36,7 @@ This framework was built in collaboration and is adopted by the following partne
 
 ## Introduction
 
-AI coding tools have moved from novelty to daily workflow in under two years. Andrej Karpathy coined the term "vibe coding" in early 2025 - describing developers who prompt AI, accept all suggestions, and barely read the output. By early 2026, he had already moved on, calling the practice outdated and advocating instead for "agentic engineering": careful, supervised AI-assisted development with full human oversight [1]. While early-2025 AI models were shown in some cases to have a net negative impact on developer productivity [21], models have improved significantly by early 2026, alongside growing efforts within open-source communities to establish appropriate governance and usage policies.
+AI coding tools have moved from novelty to daily workflow in under two years. Andrej Karpathy coined the term "vibe coding" in early 2025 - describing developers who prompt AI, accept all suggestions, and barely read the output. By early 2026, he had already moved on, calling the practice outdated and advocating instead for "agentic engineering": careful, supervised AI-assisted development with full human oversight [1]. An early-2025 study found AI tools made experienced open-source developers slower [21], but the same team's early-2026 follow-up found weak evidence of a speedup instead, as models improved [38]. Alongside this, open-source communities have made growing efforts to establish appropriate governance and usage policies to keep up.
 
 This trajectory tells us something important: the tools are real and improving rapidly, but the hype cycle consistently outpaces responsible adoption. For any organization working in the public interest and given the prevalence of LLM use in software in this moment, a governance approach that provides deliberate attention to the ethics of LLM use in software is required.
 
@@ -305,6 +305,7 @@ This framework is intended as a starting point for consultation among NGOs, civi
 35. Jegham, N. et al. (2025). [How Hungry is AI? Benchmarking Energy, Water, and Carbon Footprint of LLM Inference.](https://arxiv.org/abs/2505.09598)
 36. Masley, A. (2025). [A Cheat Sheet for Conversations About AI's Environmental Impact.](https://blog.andymasley.com/p/a-cheat-sheet-for-conversations-about) Argues individual AI use is climate-negligible; cited here as a counterpoint.
 37. Zitron, E. (2026). [The More You Buy, The More You Lose.](https://www.wheresyoured.at/the-more-you-buy-the-more-you-lose/) Where's Your Ed At. Documents hyperscaler capacity commitments, circular financing between AI labs and their suppliers, and the resulting component demand loop.
+38. METR (2026). [We Are Changing Our Developer Productivity Experiment Design.](https://metr.org/blog/2026-02-24-uplift-update/)
 
 [1]: https://x.com/karpathy/status/2019137879310836075 "Karpathy, A. (2025–2026). From 'vibe coding' to 'agentic engineering.'"
 [2]: https://www.nature.com/articles/s41598-025-34350-3 "Nature Scientific Reports (2026). Cybersecurity risks in AI-generated code."
@@ -343,6 +344,7 @@ This framework is intended as a starting point for consultation among NGOs, civi
 [35]: https://arxiv.org/abs/2505.09598 "How Hungry is AI? Benchmarking Energy, Water, and Carbon Footprint of LLM Inference."
 [36]: https://blog.andymasley.com/p/a-cheat-sheet-for-conversations-about "Masley, A. A cheat sheet for conversations about AI's environmental impact."
 [37]: https://www.wheresyoured.at/the-more-you-buy-the-more-you-lose/ "Zitron, E. The More You Buy, The More You Lose."
+[38]: https://metr.org/blog/2026-02-24-uplift-update/ "METR 2026 uplift update."
 
 ## Additional Sources
 
