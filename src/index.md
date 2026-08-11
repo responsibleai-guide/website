@@ -99,6 +99,8 @@ The energy used by each LLM prompt does not tell the full story. When considerin
 
 The refinement of AI models often relies on low-paid human labor for data labeling and content moderation, frequently in low- and middle-income economies. The training data itself was often collected without consent from its creators. Using these tools means participating in a supply chain with unresolved ethical questions about consent, compensation, and intellectual property [20].
 
+As investigative journalism and studies catch up, data supporting this is growing. Investigations found Kenyan workers paid under $2 per hour to filter traumatic content [43], with similar conditions reported in India [44]. Fairwork's 2025 ratings of cloudwork platforms show that, of the data-work suppliers assessed, none paid a living wage and only two guaranteed minimum wage [45]. Big tech firms also route this work through at least 30 intermediary platforms, fragmenting accountability [46]. Amnesty International concluded in 2026 that generative AI systems built on unlawfully scraped data are incompatible with international human rights law [47].
+
 **Mitigation approaches:**
 
 - Preference for open models where viable. See [recommended open models page](/recommended-open-models/).
@@ -313,6 +315,11 @@ This framework is intended as a starting point for consultation among NGOs, civi
 40. Data Center Watch (2026). [$64 Billion of Data Center Projects Blocked or Delayed.](https://www.datacenterwatch.org/report)
 41. Food & Water Watch (2026). [How to Stop a Data Center Near You.](https://www.foodandwaterwatch.org/2026/03/05/how-to-stop-a-data-center-near-you/)
 42. Brookings (2026). [Data Center Moratoriums Are Not a Substitute for Oversight.](https://www.brookings.edu/articles/data-center-moratoriums-are-not-a-substitute-for-oversight/)
+43. Perrigo, B. (2023). [OpenAI Used Kenyan Workers on Less Than $2 Per Hour.](https://time.com/6247678/openai-chatgpt-kenya-workers/) Time.
+44. The Guardian (2026). ["In the End You Feel Blank": India's Female Workers Watching Hours of Abusive Content to Train AI.](https://www.theguardian.com/global-development/2026/feb/05/in-the-end-you-feel-blank-indias-female-workers-watching-hours-of-abusive-content-to-train-ai)
+45. Fairwork (2025). [Cloudwork Ratings 2025.](https://fair.work/en/fw/publications/cloudwork-report-2025/) Oxford Internet Institute.
+46. SOMO (2026). [Big Tech Sets Unfair Terms and Conditions for AI Data Workers Globally.](https://www.somo.nl/big-tech-sets-unfair-terms-and-conditions-for-ai-data-workers-globally/)
+47. Amnesty International (2026). [Violations in the Shell: Exposing the Human Rights Costs of Generative AI.](https://www.amnesty.org/en/documents/pol40/0996/2026/en/)
 
 [1]: https://x.com/karpathy/status/2019137879310836075 "Karpathy, A. (2025–2026). From 'vibe coding' to 'agentic engineering.'"
 [2]: https://www.nature.com/articles/s41598-025-34350-3 "Nature Scientific Reports (2026). Cybersecurity risks in AI-generated code."
@@ -356,6 +363,11 @@ This framework is intended as a starting point for consultation among NGOs, civi
 [40]: https://www.datacenterwatch.org/report "Data Center Watch report."
 [41]: https://www.foodandwaterwatch.org/2026/03/05/how-to-stop-a-data-center-near-you/ "How to Stop a Data Center Near You."
 [42]: https://www.brookings.edu/articles/data-center-moratoriums-are-not-a-substitute-for-oversight/ "Data Center Moratoriums Are Not a Substitute for Oversight."
+[43]: https://time.com/6247678/openai-chatgpt-kenya-workers/ "OpenAI Used Kenyan Workers on Less Than $2 Per Hour."
+[44]: https://www.theguardian.com/global-development/2026/feb/05/in-the-end-you-feel-blank-indias-female-workers-watching-hours-of-abusive-content-to-train-ai "India's Female Workers Watching Hours of Abusive Content to Train AI."
+[45]: https://fair.work/en/fw/publications/cloudwork-report-2025/ "Fairwork Cloudwork Ratings 2025."
+[46]: https://www.somo.nl/big-tech-sets-unfair-terms-and-conditions-for-ai-data-workers-globally/ "Big Tech Sets Unfair Terms for AI Data Workers."
+[47]: https://www.amnesty.org/en/documents/pol40/0996/2026/en/ "Violations in the Shell."
 
 ## Additional Sources
 
