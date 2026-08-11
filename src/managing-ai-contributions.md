@@ -162,8 +162,8 @@ CI pipeline tools can catch what human review misses:
   - Unnecessary docstrings, for plainly obvious code functionality, e.g. a very simple function.
   - Strange variable names that you wouldn't typically see a human using.
   - Overly conformist and 'perfect' looking, lacking the messy or individual style of human developers.
-- There are experimental approaches [1](https://github.com/thinkst/zippy)[2](https://github.com/YerbaPage/DetectCodeGPT) to automate this identification, however, strong caution should be used if integrating them into an automated pipeline as AI text detectors [misclassify the majority of non-native English writers as AI](https://arxiv.org/abs/2304.02819).
-- There is also a worrying trend of fully automated bot 'agents' making PRs to open-source projects:
+- There are experimental approaches [source 1](https://github.com/thinkst/zippy)[source 2](https://github.com/YerbaPage/DetectCodeGPT) to automate this identification, however, strong caution should be used if integrating them into an automated pipeline as AI text detectors [misclassify the majority of non-native English writers as AI](https://arxiv.org/abs/2304.02819).
+- There is also a worrying trend of fully automated bot 'agents' making PRs to open-source projects [source 1](https://thehackernews.com/2026/08/claude-mythos-5-tried-to-backdoor-real.html):
   - It's _generally_ possible to identify this as AI-generated _for now_ by asking questions about the code and checking responses.
   - Telltale signs of a bot account: frequency of PRs open across a large range of repos, number of forks made in a short space of time, integration with OpenClaw or other 'AI assistant' tools.
   - Perhaps a list of 'bot' accounts could be compiled and included in a CI action to flag PRs as AI?
@@ -177,6 +177,7 @@ CI pipeline tools can catch what human review misses:
 - Use a standard response for non-compliant PRs (template below).
 - If a contributor cannot answer basic questions about their code, the PR is not ready.
 - If a contributor intentionally breaks rules laid out in the provided AI contribution policy, they may be subject to a 'ban' on future submissions (in the worst case, it is possible to block someone from interacting with organization or personal account repos).
+- To measure AI's impact on your maintainers, track review time and outcomes rather than contribution counts. Most community health metrics [predate AI-speed contributions](https://nesbitt.io/2026/05/27/chaoss-metrics-in-2026.html) and now mostly measure how susceptible a project is to AI-assisted abuse.
 
 **Response template for non-compliant PRs:**
 
