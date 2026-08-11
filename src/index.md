@@ -299,6 +299,8 @@ This framework is intended as a starting point for consultation among NGOs, civi
 31. Cloud Security Alliance (2026). [Agentjacking: MCP Injection Hijacks AI Coding Agents.](https://labs.cloudsecurityalliance.org/research/csa-research-note-agentjacking-mcp-sentry-injection-20260612/)
 32. Help Net Security (2026). [Prompt Injection Still Drives Most Agentic AI Security Failures in Production.](https://www.helpnetsecurity.com/2026/06/11/owasp-prompt-injection-ai-security-failures/) Reporting on OWASP GenAI Security Project, _State of Agentic AI Security and Governance_ v2.01.
 33. Anthropic (2026). [Project Glasswing: An Initial Update.](https://www.anthropic.com/research/glasswing-initial-update)
+34. Oviedo, F. et al. (2026). [Energy Use of AI Inference: Efficiency Pathways and Test-Time Scaling.](https://arxiv.org/abs/2509.20241) Joule.
+35. Jegham, N. et al. (2025). [How Hungry is AI? Benchmarking Energy, Water, and Carbon Footprint of LLM Inference.](https://arxiv.org/abs/2505.09598)
 
 [1]: https://x.com/karpathy/status/2019137879310836075 "Karpathy, A. (2025–2026). From 'vibe coding' to 'agentic engineering.'"
 [2]: https://www.nature.com/articles/s41598-025-34350-3 "Nature Scientific Reports (2026). Cybersecurity risks in AI-generated code."
@@ -333,6 +335,8 @@ This framework is intended as a starting point for consultation among NGOs, civi
 [31]: https://labs.cloudsecurityalliance.org/research/csa-research-note-agentjacking-mcp-sentry-injection-20260612/ "Agentjacking: MCP Injection Hijacks AI Coding Agents."
 [32]: https://www.helpnetsecurity.com/2026/06/11/owasp-prompt-injection-ai-security-failures/ "Prompt injection still drives most agentic AI security failures in production."
 [33]: https://www.anthropic.com/research/glasswing-initial-update "Anthropic: Project Glasswing initial update."
+[34]: https://arxiv.org/abs/2509.20241 "Energy Use of AI Inference: Efficiency Pathways and Test-Time Scaling."
+[35]: https://arxiv.org/abs/2505.09598 "How Hungry is AI? Benchmarking Energy, Water, and Carbon Footprint of LLM Inference."
 
 ## Additional Sources
 
@@ -370,13 +374,13 @@ However, as we do not have a prescriptive usage policy, and developers can use o
 
 ### 2. Convert Queries to Electricity Usage
 
-- A recent analysis by Epoch AI [23] gave an estimate of ~0.0003 kWh per query to GPT-4o, for a 100 word context.
-- There are no official published per-query figures for models like Opus 4.6.
-- If we take the approximation from the analysis and multiply by a fudge factor of 50x, considering larger context loaded from a codebase, and longer spent on reasoning problems, plus a 1.2x multiplier for datacenter overhead:
+- A 2026 peer-reviewed analysis of production LLM inference measured a median of 0.31 Wh per typical query, and 3.91 Wh for long reasoning queries, including datacenter overhead [34].
+- Earlier public estimates, including the Epoch AI figure this appendix previously used [23], overstated per-query energy by 4-20x by ignoring production optimizations [34].
+- Coding assistance leans heavily on long context and reasoning, and agentic workflows chain many queries per prompt, so we take roughly double the long-query median: ~8 Wh per prompt.
 
-Energy per query: ~0.018 kWh
+Energy per query: ~0.008 kWh
 
-**115.2 kWh usage per month** (for a 5 person team)
+**51.2 kWh usage per month** (for a 5 person team)
 
 ### 3. Convert Electricity to CO₂ Emissions
 
@@ -387,13 +391,15 @@ Energy per query: ~0.018 kWh
 
 tCO₂e = kWh_total × (gCO₂/kWh / 1000 / 1000)
 
-**0.051 tonnes CO₂ equivalent produced per month**
+**0.023 tonnes CO₂ equivalent produced per month**
+
+- Note that datacenters also consume fresh water: roughly 0.2 to 1.2 litres per kWh on site for cooling, plus around 4 to 6 litres per kWh in the electricity supply chain [35]. At the usage above, that is on the order of a few hundred litres per month.
 
 ### 4. Convert Emissions to Donation Proxy
 
 - Research by Founders Pledge, suggests that donating 1000 USD to effective climate advocacy charities could avert approximately 100 tCO₂ from being omitted (expected-value estimate for high-impact policy/advocacy orgs) [26].
 - **This does not offset emissions made, nor negate your personal responsibility to reduce your footprint**.
 - However, considering how uncommon this type of donation is (for corporate entities that typically do not care much), it could be argued that this is an acceptable mitigation strategy at this scale, by proxy.
-- Let's add another fudge factor of 100x to account for additional uncertainties: model used, frequency of use, and inaccuracies in various approximations. This gives us a nicely pessimistic estimate of ~2.55 tCO₂.
+- Let's add another fudge factor of 100x to account for additional uncertainties: model used, frequency of use, and inaccuracies in various approximations. This gives us a nicely pessimistic estimate of ~2.3 tCO₂.
 
-Recommendation: **~26 USD donation per month**, for a team of 5 devs using LLM assistance.
+Recommendation: **~23 USD donation per month**, for a team of 5 devs using LLM assistance.
