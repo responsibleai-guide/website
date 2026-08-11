@@ -40,6 +40,8 @@ AI coding tools have moved from novelty to daily workflow in under two years. An
 
 This trajectory tells us something important: the tools are real and improving rapidly, but the hype cycle consistently outpaces responsible adoption. For any organization working in the public interest and given the prevalence of LLM use in software in this moment, a governance approach that provides deliberate attention to the ethics of LLM use in software is required.
 
+The gap is real: a 2026 survey found 93% of aid workers had used AI tools, but only 22% worked under a formal AI policy [54], and local organizations in crisis regions show the highest daily usage with the least governance support [55].
+
 This document provides a framework in three parts: the ethical concerns AI adoption raises and how to mitigate them; the specific responsibilities that arise when AI intersects with open-source practice; and the human dimensions - learning, craft, and cognition - that must be protected as these tools become pervasive.
 
 ---
@@ -338,6 +340,8 @@ This framework is intended as a starting point for consultation among NGOs, civi
 51. Baltes, S., Cheong, H. & Treude, C. (2026). ["An Endless Stream of AI Slop": How Developers Discuss the Burden of AI-Assisted Software Development.](https://arxiv.org/abs/2603.27249)
 52. Watanabe, Y. et al. (2026). [On the Use of Agentic Coding: An Empirical Study of Pull Requests on GitHub.](https://arxiv.org/abs/2509.14745)
 53. GitClear (2026). [The AI Code Quality Maintainability Gap.](https://www.gitclear.com/the_ai_code_quality_maintainability_gap)
+54. Nhando, D. (2026). [Uncovering the Humanitarian and Nonprofit Sectors' AI Governance Crisis.](https://www.techpolicy.press/uncovering-the-humanitarian-and-nonprofit-sectors-ai-governance-crisis/) TechPolicy.Press.
+55. Parkinson, K.M. (2026). [How Are Humanitarians Using AI in 2026?](https://www.humanitarianleadershipacademy.org/resources/opinion-how-are-humanitarians-using-ai-in-2026-the-case-for-governance-and-local-leadership/) Humanitarian Leadership Academy.
 
 [1]: https://x.com/karpathy/status/2019137879310836075 "Karpathy, A. (2025–2026). From 'vibe coding' to 'agentic engineering.'"
 [2]: https://www.nature.com/articles/s41598-025-34350-3 "Nature Scientific Reports (2026). Cybersecurity risks in AI-generated code."
@@ -392,6 +396,8 @@ This framework is intended as a starting point for consultation among NGOs, civi
 [51]: https://arxiv.org/abs/2603.27249 "An Endless Stream of AI Slop."
 [52]: https://arxiv.org/abs/2509.14745 "On the Use of Agentic Coding."
 [53]: https://www.gitclear.com/the_ai_code_quality_maintainability_gap "The AI Code Quality Maintainability Gap."
+[54]: https://www.techpolicy.press/uncovering-the-humanitarian-and-nonprofit-sectors-ai-governance-crisis/ "The Humanitarian and Nonprofit Sectors' AI Governance Crisis."
+[55]: https://www.humanitarianleadershipacademy.org/resources/opinion-how-are-humanitarians-using-ai-in-2026-the-case-for-governance-and-local-leadership/ "How Are Humanitarians Using AI in 2026?"
 
 ## Additional Sources
 
