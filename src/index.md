@@ -190,7 +190,9 @@ See [AI-Assisted Coding Guide](/ai-assisted-coding-guide/#what-ai-is-good-for-ap
 
 ### 2.3 What Leading Projects Are Doing
 
-Project responses range from cautious acceptance to outright bans. The landscape is moving fast, but the following represent the most significant approaches as of early 2026. Notably, the platforms hosting open-source projects have been slow to provide maintainer tooling for filtering or flagging AI-generated contributions - several projects cite this as a direct driver of their restrictive policies [10]. OSS foundations, meanwhile, have largely focused on licensing questions rather than the quality and burnout crisis maintainers are facing now [10].
+Project responses range from cautious acceptance to outright bans. The landscape is moving fast, but the following represent the most significant approaches as of 2026. Notably, the platforms hosting open-source projects have been slow to provide maintainer tooling for filtering or flagging AI-generated contributions - several projects cite this as a direct driver of their restrictive policies [10]. OSS foundations, meanwhile, have largely focused on licensing questions rather than the quality and burnout crisis maintainers are facing now [10].
+
+For an ongoing view, RedMonk maintains a policy landscape covering 86 organizations [60], and a community-maintained table tracks over 300 project policies [61].
 
 **Disclosure and accountability:**
 
@@ -199,7 +201,6 @@ Project responses range from cautious acceptance to outright bans. The landscape
 - **cURL** - AI contributions accepted with mandatory disclosure. Policy breach means a permanent ban. The bug bounty was canceled after AI reports overwhelmed the team - only 5% of submissions identified real vulnerabilities [13], [10].
 - **CloudNativePG** - Permits AI-assisted contributions under strict human accountability rules. Contributors must fully understand and maintain AI-generated code, disclose usage via commit trailers, and _guarantee legal provenance_. "Shotgun refactoring" (wide-scale refactoring or clean-up), hallucinated features, and AI-written PR descriptions are explicitly prohibited. Maintainers reserve the right to close low-effort AI PRs without detailed critique [19].
 - **Apache Spark** - Every PR must disclose AI use. Of ~8,500 commits over 2.5 years, only ~1.5% disclosed AI, but the rate is accelerating sharply [11].
-- **Apache Airflow** - Updated contributing guidelines to require AI disclosure after a surge of low-quality AI-generated PRs [11].
 - **GeoServer** - Permits AI-assisted contributions with responsibility, understanding, and correctness requirements. Additional feasibility guidance on contributor overreach, and maintainability guidance to address complexity. AI policy extends to use for security vulnerability reports and community communication channels [28].
 - **Kubernetes** - AI use must be disclosed in PR descriptions, but AI must not be credited as a co-author, and trailers like `Assisted-by` are prohibited on the grounds that they dilute human accountability [29].
 
@@ -209,7 +210,6 @@ Project responses range from cautious acceptance to outright bans. The landscape
 - **QGIS / GDAL** - Drafting transparency and accountability policies [14, 15].
 - **OpenDroneMap** - Still in active discussion with differing opinions within the community [16].
 - **Debian** - A General Resolution on LLM usage went to a vote in August 2026, with proposals ranging from a full ban written into the Social Contract to conditional acceptance [17].
-- **FluxCD** - Aligning with CNCF; experimenting with AI guidelines in sub-projects [10].
 
 **Restrictive approaches or bans:**
 
@@ -349,6 +349,8 @@ This framework is intended as a starting point for consultation among NGOs, civi
 57. EU AI Act. [Article 53: Obligations for Providers of General-Purpose AI Models.](https://artificialintelligenceact.eu/article/53/)
 58. Authors Guild (2025). [What Authors Need to Know About the Anthropic Settlement.](https://authorsguild.org/advocacy/artificial-intelligence/what-authors-need-to-know-about-the-anthropic-settlement/)
 59. Joseph Saveri Law Firm. [GitHub Copilot Litigation.](https://githubcopilotlitigation.com/)
+60. Holterhoff, K. (2026). [Generative AI Policy Landscape in Open Source.](https://redmonk.com/kholterhoff/2026/02/26/generative-ai-policy-landscape-in-open-source/) RedMonk.
+61. [Open Source AI Contribution Policies (community-maintained).](https://github.com/melissawm/open-source-ai-contribution-policies)
 
 [1]: https://x.com/karpathy/status/2019137879310836075 "Karpathy, A. (2025–2026). From 'vibe coding' to 'agentic engineering.'"
 [2]: https://www.nature.com/articles/s41598-025-34350-3 "Nature Scientific Reports (2026). Cybersecurity risks in AI-generated code."
@@ -409,6 +411,8 @@ This framework is intended as a starting point for consultation among NGOs, civi
 [57]: https://artificialintelligenceact.eu/article/53/ "EU AI Act Article 53."
 [58]: https://authorsguild.org/advocacy/artificial-intelligence/what-authors-need-to-know-about-the-anthropic-settlement/ "The Anthropic Settlement."
 [59]: https://githubcopilotlitigation.com/ "GitHub Copilot Litigation."
+[60]: https://redmonk.com/kholterhoff/2026/02/26/generative-ai-policy-landscape-in-open-source/ "Generative AI Policy Landscape in Open Source."
+[61]: https://github.com/melissawm/open-source-ai-contribution-policies "Open Source AI Contribution Policies."
 
 ## Additional Sources
 
