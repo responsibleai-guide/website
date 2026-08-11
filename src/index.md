@@ -50,16 +50,19 @@ AI adoption is not just a tooling decision. It is a values decision. Below are t
 
 ### 1.1 Data Privacy and Security
 
-Prompts sent to proprietary AI services may be stored or reused. Pasting sensitive data - beneficiary records, donor information, strategy documents, personnel details - into a commercial AI tool creates privacy and security exposure. However, this risk is not as present during software development.
+Prompts sent to proprietary AI services may be stored or reused. Pasting sensitive data - beneficiary records, donor information, strategy documents, personnel details - into a commercial AI tool creates privacy and security exposure. In software development, this mostly surfaces as leaked credentials and logs.
 
-Research published in _Nature Scientific Reports_ highlights the cybersecurity risks inherent in AI-generated code, including injection vulnerabilities, insecure templates, and insufficient input validation [2].
+Research published in _Nature Scientific Reports_ highlights the cybersecurity risks inherent in AI-generated code, including injection vulnerabilities, insecure templates, and insufficient input validation [2]. Agents themselves are also now a target: prompt injection through connected tooling is increasingly common [31], and coding agents account for the majority of reported agentic AI security incidents [32].
+
+LLMs are exceptional tools for discovering security vulnerabilities in code [33], but be especially careful using them while investigating an undisclosed vulnerability, since prompts describing it may be stored, exposed, or later discoverable, creating a disclosure risk for the organizations maintaining the affected software. Chat logs carry no legal privilege and can be obtained in litigation, as shown when a US court ordered OpenAI to produce 20 million user conversations [30].
 
 **Mitigation approaches:**
 
 - Treat all AI-generated code as untrusted third-party code, subject to mandatory human review before merging.
 - Require at least two human reviewers for every change entering a codebase.
-- Always ensure input documents and data are sanitized or anonymized before feeding them into agents.
+- Always ensure inputs and data are sanitized or anonymized before feeding them into agents (documents, logs, issue trackers).
 - Maintain best practice automated security review for repos: static code analysis, dependency scanning, vulnerability scanning, CI-based tests before merge.
+- Never paste details of undisclosed vulnerabilities into AI tools; assume all prompts are stored and discoverable.
 
 ### 1.2 Bias and Discrimination
 
@@ -292,6 +295,10 @@ This framework is intended as a starting point for consultation among NGOs, civi
 27. Effective Environmentalism. [Climate Charity Recommendations](https://www.effectiveenvironmentalism.org/climate-charities)
 28. GeoServer Project. [AI Policy.](https://geoserver.org/ai)
 29. Hannon, K. (2026). [Open Source Maintainership in the Age of AI.](https://kubernetes.io/blog/2026/06/26/open-source-maintainership-in-the-age-of-ai/) Kubernetes Blog.
+30. Data Privacy + Security Insider (2026). [When Chats Become Evidence: Court Affirms Order Requiring OpenAI to Produce 20 Million De-Identified ChatGPT Logs.](https://www.dataprivacyandsecurityinsider.com/2026/01/when-chats-become-evidence-court-affirms-order-requiring-openai-to-produce-20-million-de-identified-chatgpt-logs/)
+31. Cloud Security Alliance (2026). [Agentjacking: MCP Injection Hijacks AI Coding Agents.](https://labs.cloudsecurityalliance.org/research/csa-research-note-agentjacking-mcp-sentry-injection-20260612/)
+32. Help Net Security (2026). [Prompt Injection Still Drives Most Agentic AI Security Failures in Production.](https://www.helpnetsecurity.com/2026/06/11/owasp-prompt-injection-ai-security-failures/) Reporting on OWASP GenAI Security Project, _State of Agentic AI Security and Governance_ v2.01.
+33. Anthropic (2026). [Project Glasswing: An Initial Update.](https://www.anthropic.com/research/glasswing-initial-update)
 
 [1]: https://x.com/karpathy/status/2019137879310836075 "Karpathy, A. (2025–2026). From 'vibe coding' to 'agentic engineering.'"
 [2]: https://www.nature.com/articles/s41598-025-34350-3 "Nature Scientific Reports (2026). Cybersecurity risks in AI-generated code."
@@ -322,6 +329,10 @@ This framework is intended as a starting point for consultation among NGOs, civi
 [27]: https://www.effectiveenvironmentalism.org/climate-charities "Effective Environmentalism Climate Charity Recommendations."
 [28]: https://geoserver.org/ai "GeoServer Project AI Policy."
 [29]: https://kubernetes.io/blog/2026/06/26/open-source-maintainership-in-the-age-of-ai/ "Kubernetes: Open Source Maintainership in the Age of AI."
+[30]: https://www.dataprivacyandsecurityinsider.com/2026/01/when-chats-become-evidence-court-affirms-order-requiring-openai-to-produce-20-million-de-identified-chatgpt-logs/ "When Chats Become Evidence: OpenAI ordered to produce 20 million ChatGPT logs."
+[31]: https://labs.cloudsecurityalliance.org/research/csa-research-note-agentjacking-mcp-sentry-injection-20260612/ "Agentjacking: MCP Injection Hijacks AI Coding Agents."
+[32]: https://www.helpnetsecurity.com/2026/06/11/owasp-prompt-injection-ai-security-failures/ "Prompt injection still drives most agentic AI security failures in production."
+[33]: https://www.anthropic.com/research/glasswing-initial-update "Anthropic: Project Glasswing initial update."
 
 ## Additional Sources
 
