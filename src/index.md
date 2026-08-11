@@ -134,6 +134,16 @@ AI coding tools are already more accessible to people in wealthy countries, and 
 - Design systems that remain maintainable without AI dependence.
 - Empower local partners with open tools, while remaining vigilant about access gaps.
 
+### 1.7 Economic and Financial Risk
+
+Depending on AI tools is also a financial bet. Proprietary LLM pricing is volatile, models are deprecated with little notice, and current prices are widely believed to be subsidised by investor capital. The Bank for International Settlements warns that an AI investment bust, opaque circular financing between AI firms, and record debt levels are interlocking risks to the wider financial system [48]. The externalities are already visible: AI datacenter demand has driven severe global memory price rises, with DRAM contract prices up around 60% in a single quarter of 2026 [49], raising hardware costs for organizations and communities that never touch an LLM.
+
+**Mitigation approaches:**
+
+- Avoid hard dependencies on a single provider, and keep workflows functional without AI.
+- Preference open models that can be self-hosted if provider pricing changes.
+- Budget for rising hardware costs affecting both you and your partners.
+
 ---
 
 ## 2. AI in Open Source: Responsibility, Pressure, and Maintenance
@@ -320,6 +330,8 @@ This framework is intended as a starting point for consultation among NGOs, civi
 45. Fairwork (2025). [Cloudwork Ratings 2025.](https://fair.work/en/fw/publications/cloudwork-report-2025/) Oxford Internet Institute.
 46. SOMO (2026). [Big Tech Sets Unfair Terms and Conditions for AI Data Workers Globally.](https://www.somo.nl/big-tech-sets-unfair-terms-and-conditions-for-ai-data-workers-globally/)
 47. Amnesty International (2026). [Violations in the Shell: Exposing the Human Rights Costs of Generative AI.](https://www.amnesty.org/en/documents/pol40/0996/2026/en/)
+48. Bank for International Settlements (2026). [Annual Economic Report 2026.](https://www.bis.org/publ/arpdf/ar2026e.htm)
+49. Tom's Hardware (2026). [Memory Price Surge Begins to Cool as Consumers Hit Affordability Limit.](https://www.tomshardware.com/pc-components/ram/memory-price-surge-begins-to-cool-as-consumers-hit-affordability-limit-ai-demand-still-keeps-dram-and-nand-prices-climbing-through-q3-2026)
 
 [1]: https://x.com/karpathy/status/2019137879310836075 "Karpathy, A. (2025–2026). From 'vibe coding' to 'agentic engineering.'"
 [2]: https://www.nature.com/articles/s41598-025-34350-3 "Nature Scientific Reports (2026). Cybersecurity risks in AI-generated code."
@@ -368,6 +380,8 @@ This framework is intended as a starting point for consultation among NGOs, civi
 [45]: https://fair.work/en/fw/publications/cloudwork-report-2025/ "Fairwork Cloudwork Ratings 2025."
 [46]: https://www.somo.nl/big-tech-sets-unfair-terms-and-conditions-for-ai-data-workers-globally/ "Big Tech Sets Unfair Terms for AI Data Workers."
 [47]: https://www.amnesty.org/en/documents/pol40/0996/2026/en/ "Violations in the Shell."
+[48]: https://www.bis.org/publ/arpdf/ar2026e.htm "BIS Annual Economic Report 2026."
+[49]: https://www.tomshardware.com/pc-components/ram/memory-price-surge-begins-to-cool-as-consumers-hit-affordability-limit-ai-demand-still-keeps-dram-and-nand-prices-climbing-through-q3-2026 "Memory Price Surge Begins to Cool."
 
 ## Additional Sources
 
