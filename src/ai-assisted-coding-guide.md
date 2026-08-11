@@ -100,7 +100,7 @@ When committing code or submitting PRs that include substantial AI-generated con
 Assisted-by: [tool name, e.g. Claude, Copilot]
 ```
 
-This is not about shame. It is about transparency and helping reviewers calibrate their attention. It is also becoming standard practice in major open source projects (LLVM, QGIS, Drupal, Fedora).
+This is not about shame. It is about transparency and helping reviewers decide how to use their attention. Several major projects use this convention (LLVM, QGIS, Drupal, Fedora), but it is not universal: [Kubernetes prohibits AI trailers](https://kubernetes.io/blog/2026/06/26/open-source-maintainership-in-the-age-of-ai) and asks for a plain sentence in the PR description instead. When contributing externally, follow the project's own policy.
 
 ### 8. Do Not Iterate Blindly
 

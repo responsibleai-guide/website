@@ -174,6 +174,7 @@ Project responses range from cautious acceptance to outright bans. The landscape
 - **Apache Spark** - Every PR must disclose AI use. Of ~8,500 commits over 2.5 years, only ~1.5% disclosed AI, but the rate is accelerating sharply [11].
 - **Apache Airflow** - Updated contributing guidelines to require AI disclosure after a surge of low-quality AI-generated PRs [11].
 - **GeoServer** - Permits AI-assisted contributions with responsibility, understanding, and correctness requirements. Additional feasibility guidance on contributor overreach, and maintainability guidance to address complexity. AI policy extends to use for security vulnerability reports and community communication channels [28].
+- **Kubernetes** - AI use must be disclosed in PR descriptions, but AI must not be credited as a co-author, and trailers like `Assisted-by` are prohibited on the grounds that they dilute human accountability [29].
 
 **Still navigating:**
 
@@ -290,6 +291,7 @@ This framework is intended as a starting point for consultation among NGOs, civi
 26. Founders Pledge. [Climate And Lifestyle Report](https://www.founderspledge.com/research/climate-and-lifestyle-report)
 27. Effective Environmentalism. [Climate Charity Recommendations](https://www.effectiveenvironmentalism.org/climate-charities)
 28. GeoServer Project. [AI Policy.](https://geoserver.org/ai)
+29. Hannon, K. (2026). [Open Source Maintainership in the Age of AI.](https://kubernetes.io/blog/2026/06/26/open-source-maintainership-in-the-age-of-ai/) Kubernetes Blog.
 
 [1]: https://x.com/karpathy/status/2019137879310836075 "Karpathy, A. (2025–2026). From 'vibe coding' to 'agentic engineering.'"
 [2]: https://www.nature.com/articles/s41598-025-34350-3 "Nature Scientific Reports (2026). Cybersecurity risks in AI-generated code."
@@ -319,6 +321,7 @@ This framework is intended as a starting point for consultation among NGOs, civi
 [26]: https://www.founderspledge.com/research/climate-and-lifestyle-report "Founders Pledge Climate And Lifestyle Report."
 [27]: https://www.effectiveenvironmentalism.org/climate-charities "Effective Environmentalism Climate Charity Recommendations."
 [28]: https://geoserver.org/ai "GeoServer Project AI Policy."
+[29]: https://kubernetes.io/blog/2026/06/26/open-source-maintainership-in-the-age-of-ai/ "Kubernetes: Open Source Maintainership in the Age of AI."
 
 ## Additional Sources
 

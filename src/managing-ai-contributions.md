@@ -126,7 +126,7 @@ feat: add password strength indicator to registration
 Assisted-by: Claude
 ```
 
-This is becoming a de facto standard across open source (LLVM, Fedora, QGIS are all adopting similar conventions). It helps maintainers calibrate review attention without being punitive.
+Several projects use this convention (LLVM, Fedora, QGIS), though it is not a standard: [Kubernetes prohibits AI trailers](https://kubernetes.io/blog/2026/06/26/open-source-maintainership-in-the-age-of-ai) and requires disclosure in the PR description instead. The main goal is to help maintainers decide on how to best review the code, without being punitive.
 
 ### 5. Maintain a solid CI pipeline
 
