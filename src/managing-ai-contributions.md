@@ -162,10 +162,7 @@ CI pipeline tools can catch what human review misses:
   - Unnecessary docstrings, for plainly obvious code functionality, e.g. a very simple function.
   - Strange variable names that you wouldn't typically see a human using.
   - Overly conformist and 'perfect' looking, lacking the messy or individual style of human developers.
-- There are experimental approaches to automate this identification (that could be included in a CI pipeline):
-  - https://github.com/thinkst/zippy
-  - https://github.com/YerbaPage/DetectCodeGPT
-  - Hugging Face LLM models for AI content detection.
+- There are experimental approaches [1](https://github.com/thinkst/zippy)[2](https://github.com/YerbaPage/DetectCodeGPT) to automate this identification, however, strong caution should be used if integrating them into an automated pipeline as AI text detectors [misclassify the majority of non-native English writers as AI](https://arxiv.org/abs/2304.02819).
 - There is also a worrying trend of fully automated bot 'agents' making PRs to open-source projects:
   - It's _generally_ possible to identify this as AI-generated _for now_ by asking questions about the code and checking responses.
   - Telltale signs of a bot account: frequency of PRs open across a large range of repos, number of forks made in a short space of time, integration with OpenClaw or other 'AI assistant' tools.
