@@ -48,6 +48,8 @@ This document provides a framework in three parts: the ethical concerns AI adopt
 
 AI adoption is not just a tooling decision. It is a values decision. Below are the primary ethical risks, alongside practical mitigation strategies.
 
+This framework aims at harm reduction, not blame. Shaming individuals for using AI, or for refusing to, is counterproductive: it drives usage underground and makes honest assessment of risk impossible. Nobody should be forced to use AI tools, and nobody should be shamed for declining to work with AI output. What follows is intended to support honest dialogue about risks, practical mitigations, and better technical literacy.
+
 ### 1.1 Data Privacy and Security
 
 Prompts sent to proprietary AI services may be stored or reused. Pasting sensitive data - beneficiary records, donor information, strategy documents, personnel details - into a commercial AI tool creates privacy and security exposure. In software development, this mostly surfaces as leaked credentials and logs.
