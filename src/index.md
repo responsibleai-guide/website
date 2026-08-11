@@ -154,13 +154,13 @@ AI affects not just how we code - but how we participate in the commons.
 
 ### 2.1 Asymmetric Pressure and Extractive Contributions
 
-Dries Buytaert, lead of the Drupal project, describes the core problem precisely: AI makes it cheaper to contribute, but it does not make it cheaper to review [6]. More contributions are flowing into open-source projects, but the burden of evaluating them still falls on the same small group of maintainers. This creates asymmetric pressure that risks burning out the people who hold projects together.
+Dries Buytaert, lead of the Drupal project, describes the core problem precisely: AI makes it cheaper to contribute, but it does not make it cheaper to review [6]. More contributions are flowing into open-source projects, but the burden of evaluating them still falls on the same small group of maintainers. This creates asymmetric pressure that risks burning out the people who hold projects together [51].
 
 The LLVM Project introduced the concept of an "extractive contribution" - one where the cost to maintainers of reviewing it exceeds the benefit to the project [4]. Before AI, posting a change for review signalled genuine interest from a potential long-term contributor. AI has decoupled effort from intent. A drive-by contributor can now generate a large patch in minutes and shift hours of review work onto volunteers.
 
-Daniel Stenberg, maintainer of curl, canceled the project's bug bounty program after AI-generated reports flooded his seven-person security team - fewer than one in twenty turned out to be real bugs. Yet in the same period, an AI security startup used AI well and found all 12 zero-day vulnerabilities in a recent OpenSSL security release, some hiding for over 25 years [7]. The difference was not whether AI was used. It was expertise and intent.
+Daniel Stenberg, maintainer of curl, canceled the project's bug bounty program after AI-generated reports flooded his seven-person security team - fewer than one in twenty turned out to be real bugs. Yet in the same period, an AI security startup used AI well and found all 12 zero-day vulnerabilities in a recent OpenSSL security release, some hiding for over 25 years [7]. The difference was not whether AI was used. It was expertise and intent behind the contributions. Further to this point, a study of agent-assisted pull requests on Github showed hand-written PRs are more frequently trusted and merged, with agent-assited PRs having a near 50% chance of needing reviewer revisions [52].
 
-AI-generated code also frequently reinvents the wheel - producing custom implementations rather than leveraging well-tested community libraries. This creates fragmentation and shifts maintenance burden onto the ecosystem [8].
+AI-generated code also frequently reinvents the wheel - producing custom implementations rather than leveraging well-tested community libraries. This creates fragmentation and shifts maintenance burden onto the ecosystem [8]. Repository data bears this out: an analysis of 623 million code changes found code reuse falling by a third, refactoring dropping from 21% to under 4% of changed lines, and duplicated code blocks up 81% since AI assistance became widespread [53].
 
 **Mitigation: review discipline and contribution hygiene.** Good engineering practice matters more than ever. Organizations should formalize policies addressing AI in contributions. For practical guidance, see [Working with AI Tools as a Developer](/ai-assisted-coding-guide/) and [Repo Checklist](/managing-ai-contributions/).
 
@@ -335,6 +335,9 @@ This framework is intended as a starting point for consultation among NGOs, civi
 48. Bank for International Settlements (2026). [Annual Economic Report 2026.](https://www.bis.org/publ/arpdf/ar2026e.htm)
 49. Tom's Hardware (2026). [Memory Price Surge Begins to Cool as Consumers Hit Affordability Limit.](https://www.tomshardware.com/pc-components/ram/memory-price-surge-begins-to-cool-as-consumers-hit-affordability-limit-ai-demand-still-keeps-dram-and-nand-prices-climbing-through-q3-2026)
 50. Nothias, T. (2025). [An Intellectual History of Digital Colonialism.](https://doi.org/10.1093/joc/jqaf003) Journal of Communication.
+51. Baltes, S., Cheong, H. & Treude, C. (2026). ["An Endless Stream of AI Slop": How Developers Discuss the Burden of AI-Assisted Software Development.](https://arxiv.org/abs/2603.27249)
+52. Watanabe, Y. et al. (2026). [On the Use of Agentic Coding: An Empirical Study of Pull Requests on GitHub.](https://arxiv.org/abs/2509.14745)
+53. GitClear (2026). [The AI Code Quality Maintainability Gap.](https://www.gitclear.com/the_ai_code_quality_maintainability_gap)
 
 [1]: https://x.com/karpathy/status/2019137879310836075 "Karpathy, A. (2025–2026). From 'vibe coding' to 'agentic engineering.'"
 [2]: https://www.nature.com/articles/s41598-025-34350-3 "Nature Scientific Reports (2026). Cybersecurity risks in AI-generated code."
@@ -386,6 +389,9 @@ This framework is intended as a starting point for consultation among NGOs, civi
 [48]: https://www.bis.org/publ/arpdf/ar2026e.htm "BIS Annual Economic Report 2026."
 [49]: https://www.tomshardware.com/pc-components/ram/memory-price-surge-begins-to-cool-as-consumers-hit-affordability-limit-ai-demand-still-keeps-dram-and-nand-prices-climbing-through-q3-2026 "Memory Price Surge Begins to Cool."
 [50]: https://doi.org/10.1093/joc/jqaf003 "An Intellectual History of Digital Colonialism."
+[51]: https://arxiv.org/abs/2603.27249 "An Endless Stream of AI Slop."
+[52]: https://arxiv.org/abs/2509.14745 "On the Use of Agentic Coding."
+[53]: https://www.gitclear.com/the_ai_code_quality_maintainability_gap "The AI Code Quality Maintainability Gap."
 
 ## Additional Sources
 
