@@ -8,7 +8,7 @@ description: A living framework for NGOs, civil society organizations, and missi
 
 **A living framework for NGOs, civil society organizations, and mission-driven teams navigating AI adoption in software development.**
 
-_First draft - due to update May 2026_
+_Second draft - due to update Nov 2026_
 
 ---
 
