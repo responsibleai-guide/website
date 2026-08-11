@@ -126,13 +126,15 @@ Even 'open' models will generally contain traces of stolen training material.
 
 AI coding tools are already more accessible to people in wealthy countries, and as the technology industry attempts to recoup its enormous capital investments, prices are likely to rise. At the same time, AI tools are eroding the equitable commons of free and open-source knowledge and universally accessible knowledge bases like Stack Exchange. There is a real risk of a two-tier system developing: massively powerful tools running in corporate data centers for the well-resourced, much less capable local instances for everyone else, and a diminished shared commons between the two [5].
 
+Connectivity and access are not automatically benefits. Scholars of digital colonialism describe a recurring discourse of benevolence, where projects framed as bridging divides extend extraction and dependency instead [50]. Support for AI adoption should follow community consultation and demonstrated need, not the assumption that access to these tools is inherently good.
+
 **Mitigation approaches:**
 
 - Produce open-source software that partners can adopt freely.
 - Advocate for and invest in open-source models that can run locally.
 - Avoid locking into a single proprietary ecosystem.
 - Design systems that remain maintainable without AI dependence.
-- Empower local partners with open tools, while remaining vigilant about access gaps.
+- Follow the lead of local partners: support AI adoption only where communities identify a need, and avoid creating dependency on corporate platforms.
 
 ### 1.7 Economic and Financial Risk
 
@@ -332,6 +334,7 @@ This framework is intended as a starting point for consultation among NGOs, civi
 47. Amnesty International (2026). [Violations in the Shell: Exposing the Human Rights Costs of Generative AI.](https://www.amnesty.org/en/documents/pol40/0996/2026/en/)
 48. Bank for International Settlements (2026). [Annual Economic Report 2026.](https://www.bis.org/publ/arpdf/ar2026e.htm)
 49. Tom's Hardware (2026). [Memory Price Surge Begins to Cool as Consumers Hit Affordability Limit.](https://www.tomshardware.com/pc-components/ram/memory-price-surge-begins-to-cool-as-consumers-hit-affordability-limit-ai-demand-still-keeps-dram-and-nand-prices-climbing-through-q3-2026)
+50. Nothias, T. (2025). [An Intellectual History of Digital Colonialism.](https://doi.org/10.1093/joc/jqaf003) Journal of Communication.
 
 [1]: https://x.com/karpathy/status/2019137879310836075 "Karpathy, A. (2025–2026). From 'vibe coding' to 'agentic engineering.'"
 [2]: https://www.nature.com/articles/s41598-025-34350-3 "Nature Scientific Reports (2026). Cybersecurity risks in AI-generated code."
@@ -382,6 +385,7 @@ This framework is intended as a starting point for consultation among NGOs, civi
 [47]: https://www.amnesty.org/en/documents/pol40/0996/2026/en/ "Violations in the Shell."
 [48]: https://www.bis.org/publ/arpdf/ar2026e.htm "BIS Annual Economic Report 2026."
 [49]: https://www.tomshardware.com/pc-components/ram/memory-price-surge-begins-to-cool-as-consumers-hit-affordability-limit-ai-demand-still-keeps-dram-and-nand-prices-climbing-through-q3-2026 "Memory Price Surge Begins to Cool."
+[50]: https://doi.org/10.1093/joc/jqaf003 "An Intellectual History of Digital Colonialism."
 
 ## Additional Sources
 
