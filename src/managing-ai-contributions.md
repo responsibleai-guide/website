@@ -59,6 +59,8 @@ For full policy details, see: [AI-assisted coding guide](/ai-assisted-coding-gui
 
 Update `.github/PULL_REQUEST_TEMPLATE.md` to include an AI section. It should be lightweight - one checkbox and a few optional fields. Don't make it burdensome or people will skip it.
 
+Ensure contributors are not penalized for using AI tools: honesty should be encouraged else [disclosure will stop](https://doi.org/10.1016/j.obhdp.2024.104405).
+
 **Recommended template:**
 
 ```markdown

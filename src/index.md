@@ -246,7 +246,7 @@ This applies with particular force to junior developers. The errors and dead end
 ## Guiding Principles
 
 1. **Human accountability is non-negotiable.** AI assists; humans decide, review, and own the output.
-2. **Transparency is mandatory.** When AI is used, it should be disclosed - in code commits, in documents, in reports.
+2. **Transparency is mandatory.** When AI is used, it should be disclosed - in code commits, in documents, in reports. Disclosure must never be punished: research shows that when disclosing AI use attracts stigma, people simply hide it [39].
 3. **Protect your maintainers.** Never allow AI to increase the burden on those who review and maintain code without providing corresponding relief.
 4. **Prioritize learning over speed.** An organization's greatest asset is its people. If AI adoption undermines their ability to learn and grow, the short-term productivity gain is not worth it.
 5. **Never input sensitive data into commercial AI tools.** Beneficiary data, personnel information, strategic documents, and donor details must not enter commercial AI systems without clear data governance.
@@ -306,6 +306,7 @@ This framework is intended as a starting point for consultation among NGOs, civi
 36. Masley, A. (2025). [A Cheat Sheet for Conversations About AI's Environmental Impact.](https://blog.andymasley.com/p/a-cheat-sheet-for-conversations-about) Argues individual AI use is climate-negligible; cited here as a counterpoint.
 37. Zitron, E. (2026). [The More You Buy, The More You Lose.](https://www.wheresyoured.at/the-more-you-buy-the-more-you-lose/) Where's Your Ed At. Documents hyperscaler capacity commitments, circular financing between AI labs and their suppliers, and the resulting component demand loop.
 38. METR (2026). [We Are Changing Our Developer Productivity Experiment Design.](https://metr.org/blog/2026-02-24-uplift-update/)
+39. Schilke, O. & Reimann, M. (2025). [The Transparency Dilemma: How AI Disclosure Erodes Trust.](https://doi.org/10.1016/j.obhdp.2024.104405) Organizational Behavior and Human Decision Processes.
 
 [1]: https://x.com/karpathy/status/2019137879310836075 "Karpathy, A. (2025–2026). From 'vibe coding' to 'agentic engineering.'"
 [2]: https://www.nature.com/articles/s41598-025-34350-3 "Nature Scientific Reports (2026). Cybersecurity risks in AI-generated code."
@@ -345,6 +346,7 @@ This framework is intended as a starting point for consultation among NGOs, civi
 [36]: https://blog.andymasley.com/p/a-cheat-sheet-for-conversations-about "Masley, A. A cheat sheet for conversations about AI's environmental impact."
 [37]: https://www.wheresyoured.at/the-more-you-buy-the-more-you-lose/ "Zitron, E. The More You Buy, The More You Lose."
 [38]: https://metr.org/blog/2026-02-24-uplift-update/ "METR 2026 uplift update."
+[39]: https://doi.org/10.1016/j.obhdp.2024.104405 "The Transparency Dilemma."
 
 ## Additional Sources
 
