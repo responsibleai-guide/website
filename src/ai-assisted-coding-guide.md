@@ -35,7 +35,7 @@ Using AI is like delegating work to a junior team member. It can move fast and p
 ## What AI Is Bad At (Be Cautious Here)
 
 - **Architecture decisions:** AI does not understand your system's history, constraints, or users. It will happily suggest a redesign and large refactors that ignore your actual context. These decisions are yours to make.
-- **Security-sensitive code:** AI-generated code frequently has vulnerabilities - missing input validation, insecure defaults, outdated patterns. All security-relevant code must be manually engineered and reviewed.
+- **Security-sensitive code:** AI-generated code frequently has vulnerabilities - missing input validation, insecure defaults, outdated patterns [see study](https://www.veracode.com/blog/spring-2026-genai-code-security). All security-relevant code must be manually engineered and reviewed.
 - **Domain-specific logic:** AI often fails on edge cases unique to your domain. _(Example from geospatial: AI routinely mishandles anti-meridian polygon wrapping because it doesn't understand spherical geometry unless explicitly guided.)_ Providing domain-specific context in your prompt can help, but in some cases general models are simply not the right tool for specialized knowledge.
 - **Choosing dependencies:** LLMs frequently generate custom implementations instead of using well-tested libraries. Always ask: does a maintained library already solve this? If yes, use it.
 - **Anything involving beneficiary or sensitive data:** Never paste personal data, donor information, or internal strategy into AI tools. Ensure access restrictions are set when sharing code repositories with agents (including ensuring `.env` files and secrets are not exposed).
