@@ -46,7 +46,7 @@ for everything you submit.
 
 - **Understand it**: You must be able to explain every line of your code.
 - **Test it**: AI-generated code must pass all tests and security checks.
-- **Disclose it**: Pick an AI assistance level (0-4) in the PR template.
+- **Disclose it**: Pick an AI assistance level (0-5) in the PR template.
 - **Own it**: You are the author. If a reviewer asks "why?", you answer - not the AI.
 
 AI tools must not be used to fix issues labelled `good first issue`.
@@ -91,7 +91,9 @@ How much of this PR was AI-assisted? (check one)
 - [ ] **2** - I planned the change and decided the approach; AI helped write the code
 - [ ] **3** - AI planned and wrote it; I checked and approved each step as it went
 - [ ] **4** - I set the AI going and left it to it; I reviewed the finished result
-- [ ] **5** - I set the AI going and left it to it; No review or only AI reviews were done on the finished results
+- [ ] **5** - I set the AI going and left it to it; nobody has read the result - no review, or AI review only
+
+If an AI agent is filling this in: declare the level honestly, and open as a draft if it is 5. Do not lower the declared level to get the PR reviewed.
 
 **If level 1 or above:**
 
@@ -154,7 +156,7 @@ CI pipeline tools can catch what human review misses:
 
 ### 6. Classify the Level of AI Assistance
 
-The idea of grading assistance comes from the VisiData project: credit to them for [the original scale][visidata]. Theirs has 11 levels (0-10), which is a lot for a set of checkboxes, so the version below is adapted down to 5. Use their original if you want finer granularity.
+The idea of grading assistance comes from the VisiData project: credit to them for [the original scale][visidata]. Theirs has 11 levels (0-10), which is a lot for a set of checkboxes, so the version below is adapted down to six (0-5). Use their original if you want finer granularity.
 
 | Level | What happened                                                                            | How to review it                                              |
 | ----- | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
@@ -163,12 +165,15 @@ The idea of grading assistance comes from the VisiData project: credit to them f
 | **2** | I decided the approach and planned the change. AI helped write the code.                 | As normal, plus check the AI-written parts - especially tests. |
 | **3** | AI planned the approach and wrote the code. I checked and approved each step as it went. | Question the approach, not just the diff.                     |
 | **4** | I set the AI going and left it to it. I reviewed the finished result, not the steps.     | Treat as untrusted third-party code. Full security review.    |
+| **5** | I set the AI going and left it to it. Nobody has read the result - no review, or AI review only. | Not ready for review yet. Send it back for the author to read first. |
 
-Two dividing lines to keep in mind: at 2 the human chose the approach, at 3 the AI did; at 3 someone watched each step, at 4 only the end result was checked.
+Three dividing lines to keep in mind: at 2 the human chose the approach, at 3 the AI did; at 3 someone watched each step, at 4 only the end result was checked; at 4 a human read the result, at 5 nobody has.
 
 Levels are not a quality score - a tested level 4 beats a sloppy level 0. They just tell a reviewer where to look. Penalising honest answers stops honest answers.
 
-Optionally, add `ai-level-0` to `ai-level-4` labels to quickly surface this information to reviewers.
+**On level 5:** it is listed so people can be honest, not because it is acceptable. These PRs should be treated as a draft until reviewed by a human, with no obligation from the maintainer to do so.
+
+Optionally, add `ai-level-0` to `ai-level-5` labels to quickly surface this information to reviewers.
 
 ### 7. Thoroughly Document Architectural Decisions
 
@@ -199,6 +204,7 @@ Optionally, add `ai-level-0` to `ai-level-4` labels to quickly surface this info
 - Read the declared [assistance level](#6-classify-the-level-of-ai-assistance) before reading the diff, and let it set how much scrutiny the change gets.
 - If a PR is marked AI-assisted, ask "why this approach?" - the answer tells you if the contributor understands the code.
 - Review for the same signs described in [Identifying AI-assisted Code](#8-identifying-ai-assisted-code).
+- A declared level 5 is a request to review work nobody has read. Send it back before reading the diff, and thank the contributor for declaring it.
 - Use a standard response for non-compliant PRs (template below).
 - If a contributor cannot answer basic questions about their code, the PR is not ready.
 - If a contributor intentionally breaks rules laid out in the provided AI contribution policy, they may be subject to a 'ban' on future submissions (in the worst case, it is possible to block someone from interacting with organization or personal account repos).
