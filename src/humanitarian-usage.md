@@ -36,6 +36,10 @@ A tool built in isolation, however good, tends to:
 - **Publish unverified data at scale.** Automated scraping of social media into a live map propagates rumour with the authority of a dashboard.
 - **Be abandoned.** Initial response lasts weeks, but rebuilding lasts years. Tools built in week one are often unmaintained by month three, while people still depend on them.
 
+A working tool is only a small part of a service. It has to fit how an organization already works, have someone to answer users and fix their records, and carry a name people already trust. Families give a missing relative's details to an agency they recognise, not to an unfamiliar domain.
+
+Proliferation itself does harm too. The well-known version is unsolicited donated goods: containers of well-meant supplies clogging the customs and warehouse capacity that prioritised relief needs, then spoiling. Every consignment was well intended; the aggregate was a second emergency. A dozen overlapping dashboards do the same to attention, data and trust.
+
 There's rarely bad intent involved. Usually it's just not knowing what already exists.
 
 ## 3. Before You Build, Ask
@@ -43,11 +47,12 @@ There's rarely bad intent involved. Usually it's just not knowing what already e
 Use LLM-assisted tooling with caution in an active response, ideally in consultation with the primary actors: national disaster management agencies, local government, and the established coordination bodies.
 
 1. **Does this already exist?** Ask the coordinating agencies before assuming there is a gap. There may already been systems in place.
-2. **Who asked for it?** A tool nobody in the response requested is a tool nobody in the response will use.
-3. **Can I contribute to an existing effort instead?** Adding to an established platform is almost always higher impact than launching a competing one.
-4. **Where does the data go?** If it does not flow into the official systems, in a format they can ingest, it will not reach the people making response decisions.
-5. **What is my duty of care?** You are collecting sensitive data about people at their most vulnerable. Consent, minimisation, retention and deletion are not optional because it is an emergency.
-6. **Who maintains this in six months?** A suitable handover plan should be in place, else the data migrated.
+2. **Who asked for it, and whose job does it become?** Name the team and the decision it feeds. A tool nobody requested is a tool nobody will use.
+3. **Can I contribute to an existing effort instead?** Adding to an established platform is almost always higher impact than launching a competing one - especially one the users already trust.
+4. **Who answers the users?** Questions, corrections and retraining are usually a bigger commitment than the software.
+5. **Where does the data go?** If it does not flow into the official systems, in a format they can ingest, it will not reach the people making response decisions.
+6. **What is my duty of care?** You are collecting sensitive data about people at their most vulnerable. Consent, minimisation, retention and deletion are not optional because it is an emergency.
+7. **Who maintains this in six months?** A suitable handover plan should be in place, else the data migrated.
 
 Answer those honestly and it may well be appropriate to build. If you do: publish openly, use recognised humanitarian data standards, make the data exportable, and offer it to the coordinating bodies rather than competing with them.
 
@@ -78,7 +83,7 @@ Note that `terremotovenezuela.com`, `terremotovenezuela.app` and `sismovenezuela
 
 ### What to take from this
 
-There was no shortage of capable people, and no shortage of software. Effort was simply spread across a dozen incompatible systems instead of a few authoritative ones. The most useful initiatives - the La Guaira cartography being the clearest example - produced standardised, openly licensed, exportable data that existing responders could act on, rather than competing to be the definitive front-end.
+There was no shortage of capable people, and no shortage of software. Effort was simply spread across a dozen incompatible systems instead of a few authoritative ones. The most useful initiatives - the La Guaira cartography being the clearest example - produced standardised, openly licensed, exportable data that existing responders could act on, rather than competing to be the definitive front-end. Worth noting who was behind them: universities and a professional engineering body, already known to the agencies. That's a large part of why the work got used.
 
 Hindsight is 20:20, and this is no criticism of people building for their own communities during a disaster. But the same energy, focused on a shared goal, goes a lot further.
 
