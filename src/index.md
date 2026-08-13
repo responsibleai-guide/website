@@ -64,9 +64,9 @@ LLMs are exceptional tools for discovering security vulnerabilities in code [33]
 
 - Treat all AI-generated code as untrusted third-party code, subject to mandatory human review before merging.
 - Require at least two human reviewers for every change entering a codebase.
-- Always ensure inputs and data are sanitized or anonymized before feeding them into agents (documents, logs, issue trackers).
+- Always ensure inputs and data are sanitized or anonymized before feeding them into agents (documents, logs, issue trackers), especially if using a proprietary LLM service.
 - Maintain best practice automated security review for repos: static code analysis, dependency scanning, vulnerability scanning, CI-based tests before merge.
-- Never paste details of undisclosed vulnerabilities into AI tools; assume all prompts are stored and discoverable.
+- Never paste details of undisclosed vulnerabilities into AI tools linked to proprietary LLM service. Assume all prompts are stored and discoverable. Self-hosted LLMs should not have the same issue.
 
 ### 1.2 Bias and Discrimination
 
