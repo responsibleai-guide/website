@@ -91,6 +91,7 @@ How much of this PR was AI-assisted? (check one)
 - [ ] **2** - I planned the change and decided the approach; AI helped write the code
 - [ ] **3** - AI planned and wrote it; I checked and approved each step as it went
 - [ ] **4** - I set the AI going and left it to it; I reviewed the finished result
+- [ ] **5** - I set the AI going and left it to it; No review or only AI reviews were done on the finished results
 
 **If level 1 or above:**
 
