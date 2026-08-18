@@ -46,7 +46,7 @@ for everything you submit.
 
 - **Understand it**: You must be able to explain every line of your code.
 - **Test it**: AI-generated code must pass all tests and security checks.
-- **Disclose it**: Mark AI-assisted PRs using the PR template.
+- **Disclose it**: Pick an AI assistance level (0-5) in the PR template.
 - **Own it**: You are the author. If a reviewer asks "why?", you answer - not the AI.
 
 AI tools must not be used to fix issues labelled `good first issue`.
@@ -58,6 +58,8 @@ For full policy details, see: [AI-assisted coding guide](/ai-assisted-coding-gui
 ### 3. PR template with AI disclosure
 
 Update `.github/PULL_REQUEST_TEMPLATE.md` to include an AI section. It should be lightweight - one checkbox and a few optional fields. Don't make it burdensome or people will skip it.
+
+Ensure contributors are not penalized for using AI tools: honesty should be encouraged else [disclosure will stop][disclosure-penalty].
 
 **Recommended template:**
 
@@ -82,10 +84,18 @@ A brief description of what this changes and why - in your own words.
 
 ## AI Tool Usage
 
-- [ ] No AI tools were used
-- [ ] AI tools were used (complete below)
+How much of this PR was AI-assisted? (check one)
 
-**If AI-assisted:**
+- [ ] **0** - No AI at any point
+- [ ] **1** - AI helped me think, but I wrote all the code myself
+- [ ] **2** - I planned the change and decided the approach; AI helped write the code
+- [ ] **3** - AI planned and wrote it; I checked and approved each step as it went
+- [ ] **4** - I set the AI going and left it to it; I reviewed the finished result
+- [ ] **5** - I set the AI going and left it to it; nobody has read the result - no review, or AI review only
+
+If an AI agent is filling this in: declare the level honestly, and open as a draft if it is 5. Do not lower the declared level to get the PR reviewed.
+
+**If level 1 or above:**
 
 - Tool(s) used:
 - What was generated:
@@ -126,7 +136,7 @@ feat: add password strength indicator to registration
 Assisted-by: Claude
 ```
 
-This is becoming a de facto standard across open source (LLVM, Fedora, QGIS are all adopting similar conventions). It helps maintainers calibrate review attention without being punitive.
+Several projects use this convention (LLVM, Fedora, QGIS), though it is not a standard: [Kubernetes prohibits AI trailers][k8s-maintainership] and requires disclosure in the PR description instead. The main goal is to help maintainers decide on how to best review the code, without being punitive.
 
 ### 5. Maintain a solid CI pipeline
 
@@ -144,6 +154,27 @@ CI pipeline tools can catch what human review misses:
 - **Licensing and copyright**: [ScanCode Toolkit][scancode] can be used to scan for copyright breaches in your code and non-compliance with license requirements.
 - **Contributor agreement**: it's possible to add a GitHub workflow prompting a contributor to sign and agree to contribution terms within a new PR. This should filter out some bot contributions, and at least make human contributors think before continuing. Note that this is only a lightweight agreement to the contribution guidelines (and a bot/AI barrier) - it is **not** a Contributor License Agreement that assigns copyright or grants re-licensing rights. An example can be found [here][contributor-agreement-example].
 
+### 6. Classify the Level of AI Assistance
+
+The idea of grading assistance comes from the VisiData project: credit to them for [the original scale][visidata]. Theirs has 11 levels (0-10), which is a lot for a set of checkboxes, so the version below is adapted down to six (0-5). Use their original if you want finer granularity.
+
+| Level | What happened                                                                            | How to review it                                              |
+| ----- | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| **0** | No AI at any point.                                                                      | As normal.                                                    |
+| **1** | AI helped me think - ideas, options, explaining things. I wrote all the code myself.      | As normal.                                                    |
+| **2** | I decided the approach and planned the change. AI helped write the code.                 | As normal, plus check the AI-written parts - especially tests. |
+| **3** | AI planned the approach and wrote the code. I checked and approved each step as it went. | Question the approach, not just the diff.                     |
+| **4** | I set the AI going and left it to it. I reviewed the finished result, not the steps.     | Treat as untrusted third-party code. Full security review.    |
+| **5** | I set the AI going and left it to it. Nobody has read the result - no review, or AI review only. | Not ready for review yet. Send it back for the author to read first. |
+
+Three dividing lines to keep in mind: at 2 the human chose the approach, at 3 the AI did; at 3 someone watched each step, at 4 only the end result was checked; at 4 a human read the result, at 5 nobody has.
+
+Levels are not a quality score - a tested level 4 beats a sloppy level 0. They just tell a reviewer where to look. Penalising honest answers stops honest answers.
+
+**On level 5:** it is listed so people can be honest, not because it is acceptable. These PRs should be treated as a draft until reviewed by a human, with no obligation from the maintainer to do so.
+
+Optionally, add `ai-level-0` to `ai-level-5` labels to quickly surface this information to reviewers.
+
 ### 7. Thoroughly Document Architectural Decisions
 
 - While LLMs are great at creating documentation from the current repo **code**, don't forget the importance of documenting decisions made throughout the project's development **by hand**.
@@ -160,11 +191,8 @@ CI pipeline tools can catch what human review misses:
   - Unnecessary docstrings, for plainly obvious code functionality, e.g. a very simple function.
   - Strange variable names that you wouldn't typically see a human using.
   - Overly conformist and 'perfect' looking, lacking the messy or individual style of human developers.
-- There are experimental approaches to automate this identification (that could be included in a CI pipeline):
-  - https://github.com/thinkst/zippy
-  - https://github.com/YerbaPage/DetectCodeGPT
-  - Hugging Face LLM models for AI content detection.
-- There is also a worrying trend of fully automated bot 'agents' making PRs to open-source projects:
+- There are experimental approaches [source 1][zippy][source 2][detect-code-gpt] to automate this identification, however, strong caution should be used if integrating them into an automated pipeline as AI text detectors [misclassify the majority of non-native English writers as AI][detector-bias].
+- There is also a worrying trend of fully automated bot 'agents' making PRs to open-source projects [source 1][bot-pr-backdoor]:
   - It's _generally_ possible to identify this as AI-generated _for now_ by asking questions about the code and checking responses.
   - Telltale signs of a bot account: frequency of PRs open across a large range of repos, number of forks made in a short space of time, integration with OpenClaw or other 'AI assistant' tools.
   - Perhaps a list of 'bot' accounts could be compiled and included in a CI action to flag PRs as AI?
@@ -173,11 +201,14 @@ CI pipeline tools can catch what human review misses:
 
 **Key points for reviewers:**
 
+- Read the declared [assistance level](#6-classify-the-level-of-ai-assistance) before reading the diff, and let it set how much scrutiny the change gets.
 - If a PR is marked AI-assisted, ask "why this approach?" - the answer tells you if the contributor understands the code.
 - Review for the same signs described in [Identifying AI-assisted Code](#8-identifying-ai-assisted-code).
+- A declared level 5 is a request to review work nobody has read. Send it back before reading the diff, and thank the contributor for declaring it.
 - Use a standard response for non-compliant PRs (template below).
 - If a contributor cannot answer basic questions about their code, the PR is not ready.
 - If a contributor intentionally breaks rules laid out in the provided AI contribution policy, they may be subject to a 'ban' on future submissions (in the worst case, it is possible to block someone from interacting with organization or personal account repos).
+- To measure AI's impact on your maintainers, track review time and outcomes rather than contribution counts. Most community health metrics [predate AI-speed contributions][chaoss-metrics] and now mostly measure how susceptible a project is to AI-assisted abuse.
 
 **Response template for non-compliant PRs:**
 
@@ -203,3 +234,11 @@ CI pipeline tools can catch what human review misses:
 [scancode]: https://github.com/aboutcode-org/scancode-toolkit
 [contributor-agreement-example]: https://github.com/hotosm/field-tm/blob/dev/.github/workflows/contribution-agreement.yml
 [madr]: https://adr.github.io/madr/
+[visidata]: https://www.visidata.org/blog/2026/ai/
+[disclosure-penalty]: https://doi.org/10.1016/j.obhdp.2024.104405
+[k8s-maintainership]: https://kubernetes.io/blog/2026/06/26/open-source-maintainership-in-the-age-of-ai
+[zippy]: https://github.com/thinkst/zippy
+[detect-code-gpt]: https://github.com/YerbaPage/DetectCodeGPT
+[detector-bias]: https://arxiv.org/abs/2304.02819
+[bot-pr-backdoor]: https://thehackernews.com/2026/08/claude-mythos-5-tried-to-backdoor-real.html
+[chaoss-metrics]: https://nesbitt.io/2026/05/27/chaoss-metrics-in-2026.html

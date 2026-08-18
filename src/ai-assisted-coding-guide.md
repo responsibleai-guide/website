@@ -35,7 +35,7 @@ Using AI is like delegating work to a junior team member. It can move fast and p
 ## What AI Is Bad At (Be Cautious Here)
 
 - **Architecture decisions:** AI does not understand your system's history, constraints, or users. It will happily suggest a redesign and large refactors that ignore your actual context. These decisions are yours to make.
-- **Security-sensitive code:** AI-generated code frequently has vulnerabilities - missing input validation, insecure defaults, outdated patterns. All security-relevant code must be manually engineered and reviewed.
+- **Security-sensitive code:** AI-generated code frequently has vulnerabilities - missing input validation, insecure defaults, outdated patterns [see study][veracode-genai-security]. All security-relevant code must be manually engineered and reviewed.
 - **Domain-specific logic:** AI often fails on edge cases unique to your domain. _(Example from geospatial: AI routinely mishandles anti-meridian polygon wrapping because it doesn't understand spherical geometry unless explicitly guided.)_ Providing domain-specific context in your prompt can help, but in some cases general models are simply not the right tool for specialized knowledge.
 - **Choosing dependencies:** LLMs frequently generate custom implementations instead of using well-tested libraries. Always ask: does a maintained library already solve this? If yes, use it.
 - **Anything involving beneficiary or sensitive data:** Never paste personal data, donor information, or internal strategy into AI tools. Ensure access restrictions are set when sharing code repositories with agents (including ensuring `.env` files and secrets are not exposed).
@@ -100,7 +100,9 @@ When committing code or submitting PRs that include substantial AI-generated con
 Assisted-by: [tool name, e.g. Claude, Copilot]
 ```
 
-This is not about shame. It is about transparency and helping reviewers calibrate their attention. It is also becoming standard practice in major open source projects (LLVM, QGIS, Drupal, Fedora).
+Where a project asks for it, say _how much_ was AI-assisted, not just _whether_ it was - see the [AI assistance scale](/managing-ai-contributions/#6-classify-the-level-of-ai-assistance).
+
+This is not about shame. It is about transparency and helping reviewers decide how to use their attention. Several major projects use this convention (LLVM, QGIS, Drupal, Fedora), but it is not universal: [Kubernetes prohibits AI trailers][k8s-maintainership] and asks for a plain sentence in the PR description instead. When contributing externally, follow the project's own policy.
 
 ### 8. Do Not Iterate Blindly
 
@@ -186,3 +188,5 @@ This guide should be reviewed every three months or whenever a significant chang
 [owasp-sqli]: https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html
 [owasp-traversal]: https://owasp.org/www-community/attacks/Path_Traversal
 [owasp-xss]: https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html
+[veracode-genai-security]: https://www.veracode.com/blog/spring-2026-genai-code-security
+[k8s-maintainership]: https://kubernetes.io/blog/2026/06/26/open-source-maintainership-in-the-age-of-ai
