@@ -19,6 +19,7 @@ Responding to a crisis is primarily a logistical challenge. Dozens of organizati
 - **One place to register missing people**, so families search once and duplicates can be resolved.
 - **One assessment of where aid is needed**, so supplies are not delivered three times to one neighbourhood and never to the next.
 - **Agreed data standards**, so what volunteers collect can actually be used by the agencies with the resources to act on it.
+- **Coordinated data collection**, so teams fill the gaps instead of surveying the same easy-to-reach places.
 
 Almost every hard problem in a response is one of centralization and interoperability, not missing software. Collaboration is the single largest determinant of whether a response succeeds - and the one thing no tool can do for you.
 
@@ -46,7 +47,7 @@ There's rarely bad intent involved. Usually it's just not knowing what already e
 
 Use LLM-assisted tooling with caution in an active response, ideally in consultation with the primary actors: national disaster management agencies, local government, and the established coordination bodies.
 
-1. **Does this already exist?** Ask the coordinating agencies before assuming there is a gap. There may already been systems in place.
+1. **Is software actually the gap?** Ask the coordinating agencies first. The real problem may be data, access or support for a tool already in use.
 2. **Who asked for it, and whose job does it become?** Name the team and the decision it feeds. A tool nobody requested is a tool nobody will use.
 3. **Can I contribute to an existing effort instead?** Adding to an established platform is almost always higher impact than launching a competing one - especially one the users already trust.
 4. **Who answers the users?** Questions, corrections and retraining are usually a bigger commitment than the software.
@@ -71,22 +72,32 @@ Many community mapping and reporting initiatives launched within days of the Jun
 
 Some built cross-synchronisation and duplicate detection between each other: engineering effort spent solving a problem created by the fragmentation itself. Meanwhile no single number for "who is still missing" existed, and families had to search several sites, in several formats, to be sure.
 
-**Damage, needs and aid coordination** - a further set of overlapping tools, including `terremotovenezuela.com` (building-damage map, 153 buildings reported), `terremotovenezuela.app` (open-source rescue coordination), `ayudacolombia.xyz`, `sismoayudave.com`, `radarvenezuela.org`, `crisisvenezuela.org`, `crisis-pulse-ve.netlify.app`, `reportaven.com`, `terremoto.hazlohoy.org`, `red-de-esperanza-lime.vercel.app`, and a Sentinel imagery-derived damage cost estimator.
-
-Note that `terremotovenezuela.com`, `terremotovenezuela.app` and `sismovenezuela.com` were three different projects with near-identical names - confusing for anyone trying to report or find information under pressure.
+**Damage, needs and aid coordination** - many more tools appeared here too. Some even had very similar names, making things confusing for anyone trying to find or report information quickly.
 
 **Institutional and professional efforts running alongside:**
 
-- [Cartografía de Evaluación de Daños - Estado La Guaira](https://drive.google.com/drive/folders/1vT99wmn2CqNlucLeaVa00FrBKKDz_alQ?usp=drive_link) - 61 standardised, openly licensed maps at 1:3,000 produced by university technical volunteers (USB / UCV / UNC-CH and others), designed to support search-and-rescue quadrant assignment and EDAN damage assessment by any responding body.
+- [Cartografía de Evaluación de Daños - Estado La Guaira](https://drive.google.com/drive/folders/1vT99wmn2CqNlucLeaVa00FrBKKDz_alQ?usp=drive_link) - university volunteers created standardised, openly licensed maps that response teams could use.
 - [Colegio de Ingenieros de Venezuela building assessments](https://danielleon.maps.arcgis.com/apps/dashboards/63964f8102b74b1b8b6907db536d4c74) - georeferenced structural evaluations by qualified engineers.
 - [ESRI Spain disaster response hub](https://drp-venezuela-disastersesriven.hub.arcgis.com/) and [wider disaster response geodata collections](https://rodolfofrancoweb.com/geodata/geodata_mundial/geodata-riesgos-y-desastres/geodata_de_respuesta_a_desastres/).
 
 ### What to take from this
 
-There was no shortage of capable people, and no shortage of software. Effort was simply spread across a dozen incompatible systems instead of a few authoritative ones. The most useful initiatives - the La Guaira cartography being the clearest example - produced standardised, openly licensed, exportable data that existing responders could act on, rather than competing to be the definitive front-end. Worth noting who was behind them: universities and a professional engineering body, already known to the agencies. That's a large part of why the work got used.
+There was plenty of skill and plenty of software. The problem was that effort was spread across separate systems. The La Guaira maps were useful because responders could easily access and use the data. They also came from groups the agencies already knew and trusted.
 
 Hindsight is 20:20, and this is no criticism of people building for their own communities during a disaster. But the same energy, focused on a shared goal, goes a lot further.
 
-So the lesson is not "do not build". It is: **find out what exists, talk to the people coordinating the response, and add to the shared picture rather than starting another one.**
+## 5. Case Study: Nepal Floods, August 2026
 
-Build *with* the responders, not in parallel to it.
+A useful counterpoint: Nepal's national disaster authority (NDRRMA) told people exactly what help was needed. None of it was new software:
+
+- **Coordinate data collection.** Map the remaining gaps instead of covering the same easy-to-reach places again.
+- **Improve existing platforms.** Help with the government systems already in use instead of building another dashboard.
+- **Work on the real blockers.** Cloud cover and incomplete data were making it difficult to understand the damage and who was affected.
+
+The team called the risk **information overload**: lots of useful work, but no shared picture.
+
+## Closing
+
+The lesson isn't "do not build". It is: **find out what exists, talk to the people coordinating the response, and add to the shared picture rather than starting another one.**
+
+Build *with* the responders, not in parallel to them.
