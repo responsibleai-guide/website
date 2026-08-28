@@ -35,6 +35,7 @@ A tool built in isolation, however good, tends to:
 - **Distort demand signals.** Uncoordinated damage or needs maps produce conflicting numbers that responders must reconcile before they can act.
 - **Create data protection risk.** Missing-persons records, locations and photographs of damaged homes are sensitive personal data. A prototype rarely has a lawful basis, a retention policy or a security review.
 - **Publish unverified data at scale.** Automated scraping of social media into a live map propagates rumour with the authority of a dashboard.
+- **Present model output as fact.** Automated building-damage detection after the 2026 Venezuela earthquakes caught most damaged buildings, but fewer than one in ten buildings it flagged were actually damaged; only where several independent products agreed did a flag become reliable. That is good enough to rank which neighbourhoods to visit first, and nowhere near good enough to say whether one building is safe - and a blank space on the map may mean "undamaged" or just "never looked at".
 - **Be abandoned.** Initial response lasts weeks, but rebuilding lasts years. Tools built in week one are often unmaintained by month three, while people still depend on them.
 
 A working tool is only a small part of a service. It has to fit how an organization already works, have someone to answer users and fix their records, and carry a name people already trust. Families give a missing relative's details to an agency they recognise, not to an unfamiliar domain.
@@ -47,15 +48,15 @@ There's rarely bad intent involved. Usually it's just not knowing what already e
 
 Use LLM-assisted tooling with caution in an active response, ideally in consultation with the primary actors: national disaster management agencies, local government, and the established coordination bodies.
 
-1. **Is software actually the gap?** Ask the coordinating agencies first. The real problem may be data, access or support for a tool already in use.
-2. **Who asked for it, and whose job does it become?** Name the team and the decision it feeds. A tool nobody requested is a tool nobody will use.
+1. **Does this already exist?** Ask the coordinating agencies before assuming there is a gap. There may already be systems in place.
+2. **Who asked for it, and whose job does it become?** Name the team and the decision it feeds, and ask what they are actually deciding this week. Search teams working building-by-building on the ground often need imagery of one inaccessible area far more than another damage map. A tool nobody requested is a tool nobody will use.
 3. **Can I contribute to an existing effort instead?** Adding to an established platform is almost always higher impact than launching a competing one - especially one the users already trust.
-4. **Who answers the users?** Questions, corrections and retraining are usually a bigger commitment than the software.
+4. **Who answers the users?** Questions, corrections and retraining are usually a bigger commitment than the software. Each extra tool also costs responders time, working out which of a dozen sources is the most accurate and the most current.
 5. **Where does the data go?** If it does not flow into the official systems, in a format they can ingest, it will not reach the people making response decisions.
 6. **What is my duty of care?** You are collecting sensitive data about people at their most vulnerable. Consent, minimisation, retention and deletion are not optional because it is an emergency.
 7. **Who maintains this in six months?** A suitable handover plan should be in place, else the data migrated.
 
-Answer those honestly and it may well be appropriate to build. If you do: publish openly, use recognised humanitarian data standards, make the data exportable, and offer it to the coordinating bodies rather than competing with them.
+Answer those honestly and it may well be appropriate to build. If you do: publish openly, use recognised humanitarian data standards, make the data exportable, keep it light enough to open on a poor connection, say plainly what it does not cover, and offer it to the coordinating bodies rather than competing with them.
 
 ## 4. Case Study: Venezuela / Colombia Earthquake, June 2026
 
@@ -79,6 +80,8 @@ Some built cross-synchronisation and duplicate detection between each other: eng
 - [Cartografía de Evaluación de Daños - Estado La Guaira](https://drive.google.com/drive/folders/1vT99wmn2CqNlucLeaVa00FrBKKDz_alQ?usp=drive_link) - university volunteers created standardised, openly licensed maps that response teams could use.
 - [Colegio de Ingenieros de Venezuela building assessments](https://danielleon.maps.arcgis.com/apps/dashboards/63964f8102b74b1b8b6907db536d4c74) - georeferenced structural evaluations by qualified engineers.
 - [ESRI Spain disaster response hub](https://drp-venezuela-disastersesriven.hub.arcgis.com/) and [wider disaster response geodata collections](https://rodolfofrancoweb.com/geodata/geodata_mundial/geodata-riesgos-y-desastres/geodata_de_respuesta_a_desastres/).
+
+**The same thing happened above the community level.** More than a dozen automated building-damage layers were produced for this earthquake by international agencies and research bodies. No two of them agreed on more than half the buildings they covered. Field teams were left to judge for themselves which was current and which was accurate - work that fell to the people with the least time for it.
 
 ### What to take from this
 
